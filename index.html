@@ -33,7 +33,7 @@
 <body class="selection:bg-pink-500 selection:text-white min-h-screen">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-pink-950/80">
+    <header class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-pink-950/80">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <button id="menu-btn" class="text-pink-300 hover:text-white focus:outline-none text-xl md:hidden">
@@ -44,14 +44,15 @@
                 </a>
             </div>
             
-            <nav class="hidden md:flex space-x-6 text-sm font-medium text-pink-200/70">
+            <nav class="hidden lg:flex space-x-5 text-xs xl:text-sm font-medium text-pink-200/70">
                 <a href="#about" class="hover:text-pink-400 transition">01. About</a>
                 <a href="#skills" class="hover:text-pink-400 transition">02. Skills</a>
                 <a href="#education" class="hover:text-pink-400 transition">03. Education</a>
                 <a href="#experience" class="hover:text-pink-400 transition">04. Experience</a>
-                <a href="#projects" class="hover:text-pink-400 transition">05. Projects</a>
-                <a href="#certificates" class="hover:text-pink-400 transition">06. Certificates</a>
-                <a href="#contact" class="hover:text-pink-400 transition">07. Contact</a>
+                <a href="#organization" class="hover:text-pink-400 transition">05. Organization</a>
+                <a href="#projects" class="hover:text-pink-400 transition">06. Projects</a>
+                <a href="#certificates" class="hover:text-pink-400 transition">07. Certificates</a>
+                <a href="#contact" class="hover:text-pink-400 transition">08. Contact</a>
             </nav>
 
             <div class="hidden md:block">
@@ -60,28 +61,75 @@
                 </span>
             </div>
         </div>
-
-        <!-- Menu Mobile Overlay -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-4 pb-6 space-y-3 glass-card border-t border-pink-950">
-            <div class="flex items-center justify-between pb-2 border-b border-pink-950">
-                <div class="flex items-center gap-3">
-                    <img src="foto-wisuda1.jpg" alt="Cici" class="w-10 h-10 rounded-full object-cover border border-pink-500/30" onerror="this.src='foto-profil.jpg'">
-                    <div>
-                        <p class="text-sm font-bold text-white">Cici Wela Sari, S.T.</p>
-                        <p class="text-xs text-pink-300/70">Software Engineer & Data Analyst</p>
-                    </div>
-                </div>
-                <button id="close-menu" class="text-pink-300 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <a href="#about" class="block text-sm text-pink-200 hover:text-pink-400 transition py-1">01. About</a>
-            <a href="#skills" class="block text-sm text-pink-200 hover:text-pink-400 transition py-1">02. Skills</a>
-            <a href="#education" class="block text-sm text-pink-200 hover:text-pink-400 transition py-1">03. Education</a>
-            <a href="#experience" class="block text-sm text-pink-200 hover:text-pink-400 transition py-1">04. Experience</a>
-            <a href="#projects" class="block text-sm text-pink-200 hover:text-pink-400 transition py-1">05. Projects</a>
-            <a href="#certificates" class="block text-sm text-pink-200 hover:text-pink-400 transition py-1">06. Certificates</a>
-            <a href="#contact" class="block text-sm text-pink-200 hover:text-pink-400 transition py-1">07. Contact</a>
-        </div>
     </header>
+
+    <!-- Backdrop Gelap untuk Menu Mobile -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden md:hidden transition-opacity duration-300 opacity-0"></div>
+
+    <!-- Sidebar Drawer Menu Mobile (Setengah Layar & Full ke Bawah) -->
+    <aside id="mobile-menu" class="fixed top-0 left-0 bottom-0 w-[75%] max-w-[300px] bg-[#141017] border-r border-pink-950/80 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between p-6 shadow-2xl overflow-y-auto">
+        <!-- Bagian Atas: Profil & Menu Navigasi -->
+        <div>
+            <!-- Tombol Close (X) di Kanan Atas -->
+            <div class="flex justify-end mb-2">
+                <button id="close-menu" class="text-pink-200/70 hover:text-white text-xl p-1 focus:outline-none">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Info Profil Rapi (Foto di Atas, Nama & Role di Bawahnya) -->
+            <div class="pb-6 mb-6 border-b border-pink-950/80">
+                <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-16 h-16 rounded-full object-cover border-2 border-pink-500/40 mb-3.5 shadow-md" onerror="this.src='foto-profil.jpg'">
+                <h4 class="text-base font-bold text-white tracking-tight">Cici Wela Sari, S.T.</h4>
+                <p class="text-xs text-pink-300/70 mt-0.5">Software Engineer & Data Analyst</p>
+            </div>
+
+            <!-- Daftar Link Navigasi -->
+            <nav class="space-y-3.5">
+                <a href="#about" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
+                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">01</span>
+                    <span class="font-medium">About</span>
+                </a>
+                <a href="#skills" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
+                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">02</span>
+                    <span class="font-medium">Skills & Languages</span>
+                </a>
+                <a href="#education" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
+                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">03</span>
+                    <span class="font-medium">Education</span>
+                </a>
+                <a href="#experience" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
+                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">04</span>
+                    <span class="font-medium">Experience</span>
+                </a>
+                <a href="#organization" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
+                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">05</span>
+                    <span class="font-medium">Organization</span>
+                </a>
+                <a href="#projects" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
+                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">06</span>
+                    <span class="font-medium">Projects</span>
+                </a>
+                <a href="#certificates" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
+                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">07</span>
+                    <span class="font-medium">Certificates</span>
+                </a>
+                <a href="#contact" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
+                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">08</span>
+                    <span class="font-medium">Contact</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Bagian Bawah Sidebar: Status & Hak Cipta -->
+        <div class="pt-6 border-t border-pink-950/60 mt-8">
+            <div class="flex items-center gap-2.5 text-xs text-pink-300/80 mb-2">
+                <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+                <span>Tersedia untuk proyek baru</span>
+            </div>
+            <p class="text-[11px] text-pink-300/40">&copy; 2026 Cici Wela Sari. All Rights Reserved.</p>
+        </div>
+    </aside>
 
     <!-- Hero Section -->
     <section id="about" class="max-w-7xl mx-auto px-6 pt-36 pb-20 md:pt-44 md:pb-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
@@ -108,7 +156,7 @@
             </h1>
             
             <p class="text-pink-100/80 text-sm md:text-base leading-relaxed justify-text">
-                Fresh graduate S1 Teknik Informatika berpredikat Cumlaude (IPK 3.90/4.00) dengan spesialisasi komprehensif dalam pengembangan perangkat lunak (Software Development) dan pengolahan data (Data Analysis). Memiliki pengalaman nyata di instansi pemerintah dan BUMN (BPS Provinsi Riau & PT Kilang Pertamina Internasional RU II Dumai) dalam merancang aplikasi <i>end-to-end</i> (Laravel, ASP.NET Core) serta mengolah data statistik berskala besar. Memiliki <i>learning agility</i> tinggi, pemikiran analitis tajam, serta kemampuan teknis kuat untuk <b>menjembatani rekayasa sistem dan wawasan berbasis data</b>.
+                Fresh graduate S1 Teknik Informatika (Kelas Internasional) berpredikat Cumlaude (IPK 3.90/4.00) dengan spesialisasi komprehensif dalam pengembangan perangkat lunak (Software Development) dan pengolahan data (Data Analysis). Memiliki pengalaman nyata di instansi pemerintah dan BUMN (BPS Provinsi Riau & PT Kilang Pertamina Internasional RU II Dumai) dalam merancang aplikasi <i>end-to-end</i> (Laravel, ASP.NET Core) serta mengolah data statistik berskala besar. Memiliki <i>learning agility</i> tinggi, pemikiran analitis tajam, serta kemampuan teknis kuat untuk <b>menjembatani rekayasa sistem dan wawasan berbasis data</b>.
             </p>
             
             <div class="grid grid-cols-3 gap-4 py-2 border-y border-pink-950/60">
@@ -140,16 +188,16 @@
         </div>
     </section>
 
-    <!-- Technical Skills Section -->
+    <!-- Technical, Soft Skills & Languages Section -->
     <section id="skills" class="py-20 bg-pink-950/20 border-y border-pink-950/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">02. SKILLS</p>
-                <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Technical & Soft Skills</h2>
-                <p class="text-pink-300/70 mt-2 text-sm">Kompetensi stack teknologi dan keterampilan penunjang kerja.</p>
+                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">02. SKILLS & LANGUAGES</p>
+                <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Technical, Soft Skills & Languages</h2>
+                <p class="text-pink-300/70 mt-2 text-sm">Kompetensi stack teknologi, keterampilan penunjang kerja, dan penguasaan bahasa.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 <div class="glass-card p-6 rounded-2xl">
                     <div class="text-pink-400 text-2xl mb-4"><i class="fa-solid fa-laptop-code"></i></div>
                     <h3 class="font-bold text-base text-white mb-2">Programming & Frameworks</h3>
@@ -169,6 +217,26 @@
                     <div class="text-fuchsia-400 text-2xl mb-4"><i class="fa-solid fa-users-gear"></i></div>
                     <h3 class="font-bold text-base text-white mb-2">Soft Skills</h3>
                     <p class="text-xs md:text-sm text-pink-100/80 leading-relaxed justify-text">Analytical Thinking, Problem Solving, Team Collaboration, Detail-Oriented, Time Management, Leadership.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-pink-500/30">
+                    <div class="text-pink-300 text-2xl mb-4"><i class="fa-solid fa-language"></i></div>
+                    <h3 class="font-bold text-base text-white mb-3">Languages</h3>
+                    <div class="space-y-3 text-xs md:text-sm">
+                        <div>
+                            <div class="flex justify-between items-center font-semibold text-white">
+                                <span>Bahasa Indonesia</span>
+                                <span class="text-[10px] bg-pink-500/20 text-pink-300 px-2 py-0.5 rounded-full border border-pink-500/30">Fasih / Native</span>
+                            </div>
+                            <p class="text-[11px] text-pink-200/60 mt-0.5">Komunikasi profesional & penulisan akademik</p>
+                        </div>
+                        <div class="pt-2 border-t border-pink-950/60">
+                            <div class="flex justify-between items-center font-semibold text-white">
+                                <span>Bahasa Inggris</span>
+                                <span class="text-[10px] bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded-full border border-rose-500/30">Profesional</span>
+                            </div>
+                            <p class="text-[11px] text-pink-200/60 mt-0.5">Kelas Internasional | Skor TOEFL: 580</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -191,7 +259,7 @@
                     <div>
                         <span class="text-xs bg-pink-500/10 text-pink-300 font-semibold px-3 py-1 rounded-full border border-pink-500/20"><i class="fa-solid fa-university mr-1"></i> Universitas Islam Riau</span>
                         <h3 class="text-xl font-bold text-white mt-4">Sarjana Teknik (S.T.) - Teknik Informatika</h3>
-                        <p class="text-pink-400 text-xs font-medium mt-1">Lulus Predikat Cumlaude (Masa studi 3,5 Tahun)</p>
+                        <p class="text-pink-400 text-xs font-medium mt-1">Kelas Internasional | Lulus Predikat Cumlaude (Masa studi 3,5 Tahun)</p>
                         <p class="text-pink-100/80 text-sm md:text-base mt-3 leading-relaxed justify-text">
                             Aktif mendalami rekayasa perangkat lunak, sistem basis data, dan analisis data. Menyelesaikan skripsi riset data medis rumah sakit menggunakan algoritma Random Forest dan C4.5.
                         </p>
@@ -219,8 +287,8 @@
     <section id="experience" class="py-20 bg-pink-950/20 border-y border-pink-950/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">04. EXPERIENCE</p>
-                <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Pengalaman yang Membentuk Saya</h2>
+                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">04. WORK EXPERIENCE</p>
+                <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Pengalaman Kerja Profesional</h2>
                 <p class="text-pink-300/70 mt-2 text-sm">Kontribusi nyata dalam rekayasa sistem, pengembangan aplikasi, dan pengajaran akademik.</p>
             </div>
             
@@ -275,11 +343,60 @@
         </div>
     </section>
 
+    <!-- Organizational & Volunteering Experience Section -->
+    <section id="organization" class="py-20 border-b border-pink-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-14">
+                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">05. ORGANIZATION & VOLUNTEERING</p>
+                <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Organizational & Volunteering Experience</h2>
+                <p class="text-pink-300/70 mt-2 text-sm">Dedikasi dalam kepemimpinan organisasi mahasiswa, tata kelola administrasi, dan pengabdian masyarakat.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Organisasi 1: Groot Robotica UIR -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                            <span class="text-xs bg-pink-500/10 text-pink-300 font-semibold px-3 py-1 rounded-full border border-pink-500/20">
+                                <i class="fa-solid fa-robot mr-1.5"></i> Groot Robotica UIR
+                            </span>
+                            <span class="text-xs text-pink-300/60 font-medium">Feb 2023 - Des 2025 | Pekanbaru, Riau</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Sekretaris Organisasi</h3>
+                        <p class="text-pink-400 text-xs font-medium mt-1 mb-3">Organisasi Robotika & Inovasi Teknologi Mahasiswa</p>
+                        <ul class="space-y-2 text-pink-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
+                            <li>Mengelola administrasi organisasi, tata persuratan resmi, dan penyusunan Laporan Pertanggungjawaban (LPJ) program kerja tahunan secara terstruktur.</li>
+                            <li>Mengkoordinasikan lebih dari 10+ kegiatan dan pelatihan kerja organisasi, serta memodernisasi sistem pengarsipan dokumen yang meningkatkan efisiensi administrasi hingga <b>+25%</b>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Organisasi 2: Mentor KIP-K & Relawan Sensus -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                            <span class="text-xs bg-rose-500/10 text-rose-300 font-semibold px-3 py-1 rounded-full border border-rose-500/20">
+                                <i class="fa-solid fa-hands-helping mr-1.5"></i> Universitas Islam Riau / Kenagarian Pangkalan
+                            </span>
+                            <span class="text-xs text-pink-300/60 font-medium">2021 - 2026 | Pekanbaru & Sumbar</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Mentor KIP-K & Relawan Sensus Kependudukan</h3>
+                        <p class="text-rose-400 text-xs font-medium mt-1 mb-3">Pendampingan Akademik & Pengabdian Masyarakat</p>
+                        <ul class="space-y-2 text-pink-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
+                            <li>Berperan aktif sebagai <b>Mentor</b> bagi mahasiswa penerima beasiswa KIP Kuliah Angkatan 2025 dalam program pendampingan akademik dan adaptasi perkuliahan.</li>
+                            <li>Berkontribusi sebagai <b>Relawan Sensus Kependudukan</b> di Kenagarian Pangkalan Koto Baru (2021) untuk pendataan dan verifikasi informasi demografi warga secara akurat.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects & Research Section -->
     <section id="projects" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">05. PROJECTS</p>
+                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">06. PROJECTS</p>
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Portofolio & Karya Inovatif</h2>
                 <p class="text-pink-300/70 mt-2 text-sm">Bukti nyata portofolio pengembangan perangkat lunak, rekayasa IoT, dan penelitian akademik.</p>
             </div>
@@ -364,7 +481,7 @@
     <section id="certificates" class="py-20 bg-pink-950/20 border-y border-pink-950/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">06. CERTIFICATES</p>
+                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">07. CERTIFICATES</p>
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Certificates & Credentials</h2>
                 <p class="text-pink-300/70 mt-2 text-sm">Dokumentasi kredensial resmi, sertifikasi keahlian industri, dan penghargaan prestasi.</p>
             </div>
@@ -509,7 +626,7 @@
     <footer id="contact" class="bg-zinc-950 border-t border-pink-950/80 py-20">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">07. CONTACT</p>
+                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">08. CONTACT</p>
                 <h3 class="text-2xl md:text-4xl font-extrabold text-white mt-2">Mari Buat Proyekmu Bekerja Lebih Baik.</h3>
                 <p class="text-pink-300/70 text-sm mt-3">Ceritakan kebutuhanmu. Saya akan membantu menemukan solusi yang paling tepat.</p>
             </div>
@@ -553,6 +670,7 @@
                 <div class="flex gap-6">
                     <a href="#about" class="hover:text-pink-400 transition">Beranda</a>
                     <a href="#skills" class="hover:text-pink-400 transition">Keahlian</a>
+                    <a href="#organization" class="hover:text-pink-400 transition">Organisasi</a>
                     <a href="#contact" class="hover:text-pink-400 transition">Kontak</a>
                 </div>
                 <p>&copy; 2026 Cici Wela Sari. All Rights Reserved.</p>
@@ -560,26 +678,39 @@
         </div>
     </footer>
 
-    <!-- Script JavaScript -->
+    <!-- Script JavaScript untuk Sidebar Drawer Mobile -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const closeMenu = document.getElementById('close-menu');
         const mobileMenu = document.getElementById('mobile-menu');
+        const menuBackdrop = document.getElementById('menu-backdrop');
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        if(closeMenu) {
-            closeMenu.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        function openDrawer() {
+            mobileMenu.classList.remove('-translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            setTimeout(() => {
+                menuBackdrop.classList.remove('opacity-0');
+                menuBackdrop.classList.add('opacity-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
         }
 
+        function closeDrawer() {
+            mobileMenu.classList.add('-translate-x-full');
+            menuBackdrop.classList.remove('opacity-100');
+            menuBackdrop.classList.add('opacity-0');
+            setTimeout(() => {
+                menuBackdrop.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openDrawer);
+        closeMenu.addEventListener('click', closeDrawer);
+        menuBackdrop.addEventListener('click', closeDrawer);
+
         document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+            link.addEventListener('click', closeDrawer);
         });
     </script>
 </body>
