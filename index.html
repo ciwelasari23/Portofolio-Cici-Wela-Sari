@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cici Wela Sari, S.T. - Software Engineer & Data Analyst</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f8fafc; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+        .soft-gradient {
+            background: linear-gradient(135deg, #0b0f19 0%, #111827 50%, #0b0f19 100%);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(56, 189, 248, 0.15);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="soft-gradient text-slate-100 min-h-screen selection:bg-sky-500 selection:text-white">
+
+    <!-- Header / Navbar Profesional -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Bagian Kiri: Tombol Menu Hamburger (Mobile) & Nama -->
+            <div class="flex items-center gap-3">
+                <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none text-xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a href="#" class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-sky-400"></span> Cici Wela Sari<span class="text-sky-400">.</span>
+                </a>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-sky-400 transition">About</a>
+                <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+                <a href="#education" class="hover:text-sky-400 transition">Education</a>
+                <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
+                <a href="#projects" class="hover:text-sky-400 transition">Projects & Research</a>
+                <a href="#certificates" class="hover:text-sky-400 transition">Certificates</a>
+                <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="https://wa.me/6282286948407" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-md transition-all">
+                    <i class="fab fa-whatsapp mr-1.5"></i> Contact Me
+                </a>
+            </div>
+        </div>
+
+        <!-- Menu Dropdown untuk HP -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-6 space-y-3 glass-card border-t border-slate-800">
+            <a href="#about" class="block text-sm text-slate-300 hover:text-sky-400 transition py-1">About</a>
+            <a href="#skills" class="block text-sm text-slate-300 hover:text-sky-400 transition py-1">Skills</a>
+            <a href="#education" class="block text-sm text-slate-300 hover:text-sky-400 transition py-1">Education</a>
+            <a href="#experience" class="block text-sm text-slate-300 hover:text-sky-400 transition py-1">Experience</a>
+            <a href="#projects" class="block text-sm text-slate-300 hover:text-sky-400 transition py-1">Projects & Research</a>
+            <a href="#certificates" class="block text-sm text-slate-300 hover:text-sky-400 transition py-1">Certificates</a>
+            <a href="#contact" class="block text-sm text-slate-300 hover:text-sky-400 transition py-1">Contact</a>
+            <a href="https://wa.me/6282286948407" target="_blank" class="inline-block w-full text-center bg-sky-600 hover:bg-sky-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md transition-all mt-2">
+                <i class="fab fa-whatsapp mr-1.5"></i> Contact Me via WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section & Executive Summary -->
+    <section id="about" class="max-w-7xl mx-auto px-6 pt-36 pb-20 md:pt-44 md:pb-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <!-- Foto Profil / Wisuda -->
+        <div class="md:col-span-5 flex justify-center order-1 md:order-2">
+            <div class="relative w-72 h-96 rounded-3xl overflow-hidden glass-card p-2 border-2 border-sky-500/30 shadow-2xl group">
+                <img src="foto-wisuda.jpg" alt="Cici Wela Sari, S.T." class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500" onerror="this.src='foto-profil.jpg'">
+                <div class="absolute bottom-4 left-4 right-4 bg-slate-900/85 backdrop-blur-md p-3 rounded-xl border border-slate-700 text-center">
+                    <p class="text-xs font-bold text-sky-400">Cici Wela Sari, S.T.</p>
+                    <p class="text-[10px] text-slate-300">Software Developer & Analyst</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teks Summary -->
+        <div class="md:col-span-7 space-y-6 order-2 md:order-1">
+            <div class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold px-4 py-1.5 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                Fresh Graduate S1 Teknik Informatika | Predikat Cumlaude (3.5 Tahun) | IPK 3.90
+            </div>
+            
+            <!-- Font dikecilkan secara signifikan agar PASTI muat dalam satu baris di Desktop -->
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight">
+                Software Engineer & <span class="bg-gradient-to-r from-sky-400 via-indigo-300 to-teal-300 bg-clip-text text-transparent">Data Analyst</span>
+            </h1>
+            
+            <!-- Menggunakan class text-justify bawaan Tailwind -->
+            <p class="text-slate-300 text-sm md:text-base leading-relaxed text-justify hyphens-auto">
+                Fresh graduate S1 Teknik Informatika berpredikat Cumlaude (IPK 3.90/4.00) dengan spesialisasi komprehensif dalam pengembangan perangkat lunak (Software Development) dan pengolahan data (Data Analysis). Memiliki pengalaman nyata di instansi pemerintah dan BUMN (BPS Provinsi Riau & PT Kilang Pertamina Internasional RU II Dumai) dalam merancang aplikasi <i>end-to-end</i> (Laravel, ASP.NET Core) serta mengolah data statistik berskala besar. Memiliki <i>learning agility</i> tinggi, pemikiran analitis tajam, serta kemampuan teknis kuat untuk <b>menjembatani rekayasa sistem dan wawasan berbasis data</b>.
+            </p>
+            
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="https://www.linkedin.com/in/cici-wela-sari-20b07335b/" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white font-medium px-6 py-3 rounded-xl shadow-md transition-all flex items-center gap-2">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://github.com/ciwelasari23" target="_blank" class="glass-card hover:bg-slate-800 text-slate-200 font-medium px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://wa.me/6282286948407" target="_blank" class="glass-card hover:bg-slate-800 text-emerald-400 font-medium px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-16 bg-slate-900/30 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold tracking-tight"><i class="fa-solid fa-code text-sky-400 mr-2"></i> Technical & Soft Skills</h2>
+                <p class="text-slate-400 mt-2 text-sm">Kompetensi stack teknologi dan keterampilan penunjang kerja.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-sky-400 text-xl mb-3"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 class="font-bold text-base text-slate-100 mb-2">Programming & Frameworks</h3>
+                    <p class="text-xs md:text-sm text-slate-300 leading-relaxed text-justify hyphens-auto">ASP.NET Core 8, Laravel, Python, PHP, C#, Java, C++, JavaScript, React Native, React.js, RESTful API.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-teal-400 text-xl mb-3"><i class="fa-solid fa-database"></i></div>
+                    <h3 class="font-bold text-base text-slate-100 mb-2">Database & Data Analysis</h3>
+                    <p class="text-xs md:text-sm text-slate-300 leading-relaxed text-justify hyphens-auto">SQL Server (SSMS), MySQL Workbench, Pandas, Scikit-learn, Exploratory Data Analysis (EDA), Random Forest & C4.5.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-indigo-400 text-xl mb-3"><i class="fa-solid fa-tools"></i></div>
+                    <h3 class="font-bold text-base text-slate-100 mb-2">IT Support & Tools</h3>
+                    <p class="text-xs md:text-sm text-slate-300 leading-relaxed text-justify hyphens-auto">Hardware/Software Troubleshooting, Computer Networking, Cisco Packet Tracer, Git/GitHub, Visual Studio Code.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-purple-400 text-xl mb-3"><i class="fa-solid fa-users-gear"></i></div>
+                    <h3 class="font-bold text-base text-slate-100 mb-2">Soft Skills</h3>
+                    <p class="text-xs md:text-sm text-slate-300 leading-relaxed text-justify hyphens-auto">Analytical Thinking, Problem Solving, Team Collaboration, Detail-Oriented, Time Management, Leadership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight"><i class="fa-solid fa-graduation-cap text-sky-400 mr-2"></i> Education</h2>
+                <p class="text-slate-400 mt-2 text-sm">Pencapaian akademik unggul dengan dedikasi tinggi di institusi terkemuka.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-sky-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow">
+                        IPK 3.90 / 4.00
+                    </div>
+                    <div>
+                        <span class="text-xs bg-sky-500/10 text-sky-400 font-semibold px-3 py-1 rounded-full border border-sky-500/20"><i class="fa-solid fa-university mr-1"></i> Universitas Islam Riau</span>
+                        <h3 class="text-xl font-bold text-slate-100 mt-4">Sarjana Teknik (S.T.) - Teknik Informatika</h3>
+                        <p class="text-sky-400 text-xs font-medium mt-1">Kelas Internasional | Lulus Predikat Cumlaude (Masa studi 3,5 Tahun)</p>
+                        <p class="text-slate-300 text-sm md:text-base mt-3 leading-relaxed text-justify hyphens-auto">
+                            Aktif mendalami rekayasa perangkat lunak, sistem basis data, dan analisis data. Menyelesaikan skripsi riset data medis rumah sakit menggunakan algoritma Random Forest dan C4.5.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-teal-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow">
+                        IPK 4.00 / 4.00
+                    </div>
+                    <div>
+                        <span class="text-xs bg-teal-500/10 text-teal-400 font-semibold px-3 py-1 rounded-full border border-teal-500/20"><i class="fa-solid fa-exchange-alt mr-1"></i> Universitas Nusa Cendana</span>
+                        <h3 class="text-xl font-bold text-slate-100 mt-4">Program Pertukaran Mahasiswa Merdeka (PMM 4)</h3>
+                        <p class="text-teal-400 text-xs font-medium mt-1">Studi Lintas Disiplin Ilmu Komputer & Teknik Elektro</p>
+                        <p class="text-slate-300 text-sm md:text-base mt-3 leading-relaxed text-justify hyphens-auto">
+                            Terpilih secara nasional untuk mengikuti program pertukaran pelajar guna memperdalam wawasan keilmuan teknologi dan memperluas kolaborasi lintas budaya.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-20 bg-slate-900/40 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight"><i class="fa-solid fa-briefcase text-sky-400 mr-2"></i> Work Experience</h2>
+                <p class="text-slate-400 mt-2 text-sm">Kontribusi nyata dalam rekayasa sistem, pengembangan aplikasi, dan pengajaran akademik.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                            <span class="text-[11px] bg-sky-500/10 text-sky-400 font-semibold px-3 py-1 rounded-full border border-sky-500/20"><i class="fa-solid fa-building-columns mr-1"></i> BPS Provinsi Riau</span>
+                            <span class="text-[11px] text-slate-400">Agu 2026 - Sekarang</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-3">Asisten Pranata Komputer (MagangHub)</h3>
+                        <ul class="space-y-2.5 text-slate-300 text-xs md:text-sm leading-relaxed list-disc list-inside text-justify hyphens-auto">
+                            <li>Diterima melalui seleksi ketat MagangHub di BPS Provinsi Riau.</li>
+                            <li>Berperan sebagai <b>Software Engineer & Full-Stack Developer</b> membangun aplikasi "MENTARI" (Monitoring Kegiatan Terintegrasi) dengan PHP, Laravel, & MySQL.</li>
+                            <li>Melakukan entri dan pengolahan data statistik Sensus Ekonomi 2026 dengan ketelitian dan akurasi tinggi.</li>
+                            <li>Mendukung operasional administrasi data, verifikasi sistem, serta pemeliharaan infrastruktur TI.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                            <span class="text-[11px] bg-emerald-500/10 text-emerald-400 font-semibold px-3 py-1 rounded-full border border-emerald-500/20"><i class="fa-solid fa-industry mr-1"></i> PT Kilang Pertamina</span>
+                            <span class="text-[11px] text-slate-400">Jul 2025 - Agu 2025</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-3">Programmer Intern (Kerja Praktik)</h3>
+                        <ul class="space-y-2.5 text-slate-300 text-xs md:text-sm leading-relaxed list-disc list-inside text-justify hyphens-auto">
+                            <li>Merancang dan mengembangkan Dashboard Admin Customer Service Chatbot AI menggunakan ASP.NET Core 8.</li>
+                            <li>Berkolaborasi dengan tim lintas fungsi (IT, CS, Business) untuk memenuhi kebutuhan proses bisnis operasional.</li>
+                            <li>Meningkatkan efisiensi layanan informasi hingga 20% dan mempercepat waktu respons CS hingga 30%.</li>
+                            <li>Menyusun dokumentasi teknis, user guide, dan mempresentasikan hasil proyek kepada manajemen.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                            <span class="text-[11px] bg-purple-500/10 text-purple-400 font-semibold px-3 py-1 rounded-full border border-purple-500/20"><i class="fa-solid fa-chalkboard-user mr-1"></i> Univ. Islam Riau</span>
+                            <span class="text-[11px] text-slate-400">Okt 2024 - Jul 2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-3">Asisten Praktikum Laboratorium IT</h3>
+                        <ul class="space-y-2.5 text-slate-300 text-xs md:text-sm leading-relaxed list-disc list-inside text-justify hyphens-auto">
+                            <li>Membimbing lebih dari 40+ mahasiswa per kelas untuk 10 mata kuliah lintas bidang (Database, Jaringan, Struktur Data, Big Data, Pemrograman Web).</li>
+                            <li>Melakukan pemeliharaan perangkat laboratorium dan troubleshooting hardware/software, meningkatkan efektivitas praktikum hingga 25%.</li>
+                            <li>Mengembangkan modul praktikum dan rubrik penilaian terstruktur bersama dosen pengampu.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Research Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight"><i class="fa-solid fa-laptop-code text-sky-400 mr-2"></i> Projects & Research</h2>
+                <p class="text-slate-400 mt-2 text-sm">Bukti nyata portofolio pengembangan perangkat lunak, rekayasa IoT, dan penelitian akademik.</p>
+            </div>
+
+            <!-- Baris 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                    <div class="p-6">
+                        <span class="text-[11px] bg-sky-500/10 text-sky-400 font-semibold px-3 py-1 rounded-full border border-sky-500/20"><i class="fa-solid fa-code mr-1"></i> Laravel & MySQL (BPS)</span>
+                        <h3 class="text-lg font-bold text-slate-100 mt-4">Aplikasi MENTARI BPS</h3>
+                        <p class="text-slate-300 text-xs md:text-sm mt-2 leading-relaxed text-justify hyphens-auto">Platform berbasis web untuk memantau, mengelola, dan mengoptimalkan kegiatan perencanaan secara terintegrasi di BPS Provinsi Riau.</p>
+                    </div>
+                    <div class="bg-slate-950/80 p-3 border-t border-slate-800 grid grid-cols-2 gap-2">
+                        <div class="overflow-hidden rounded-lg bg-slate-950 border border-slate-800 h-44 flex items-center justify-center">
+                            <img src="images/dokumentasi-mentari.jpeg" alt="Presentasi MENTARI" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <div class="overflow-hidden rounded-lg bg-slate-950 border border-slate-800 h-44 flex items-center justify-center">
+                            <img src="images/dokumentasi-mentari2.jpeg" alt="UI MENTARI" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                    <div class="p-6">
+                        <span class="text-[11px] bg-emerald-500/10 text-emerald-400 font-semibold px-3 py-1 rounded-full border border-emerald-500/20"><i class="fa-solid fa-server mr-1"></i> ASP.NET Core 8 (Pertamina)</span>
+                        <h3 class="text-lg font-bold text-slate-100 mt-4">Dashboard Admin Chatbot AI</h3>
+                        <p class="text-slate-300 text-xs md:text-sm mt-2 leading-relaxed text-justify hyphens-auto">Dashboard admin operasional untuk memantau, mengelola, dan mengevaluasi layanan informasi chatbot AI di PT Kilang Pertamina Internasional.</p>
+                    </div>
+                    <div class="bg-slate-950/80 p-3 border-t border-slate-800">
+                        <div class="overflow-hidden rounded-lg bg-slate-950 border border-slate-800 h-44 flex items-center justify-center">
+                            <img src="images/dokumentasi-project-pertamina.png" alt="Dashboard Pertamina" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                    <div class="p-6">
+                        <span class="text-[11px] bg-cyan-500/10 text-cyan-400 font-semibold px-3 py-1 rounded-full border border-cyan-500/20"><i class="fa-solid fa-microchip mr-1"></i> IoT Engineering (ESP32)</span>
+                        <h3 class="text-lg font-bold text-slate-100 mt-4">Sistem Jemuran Pintar Otomatis</h3>
+                        <p class="text-slate-300 text-xs md:text-sm mt-2 leading-relaxed text-justify hyphens-auto">Mengembangkan sistem perangkat keras & lunak terintegrasi untuk proyek otomatisasi "Jemuran Pintar" menggunakan mikrokontroler ESP32.</p>
+                    </div>
+                    <div class="bg-slate-950/80 p-3 border-t border-slate-800">
+                        <div class="overflow-hidden rounded-lg bg-slate-950 border border-slate-800 h-44 flex items-center justify-center">
+                            <img src="images/dokuemntasi-jemuran-pintar.jpg" alt="Jemuran Pintar" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baris 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl shrink-0 mt-1">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] bg-indigo-500/10 text-indigo-400 font-semibold px-2.5 py-0.5 rounded-full border border-indigo-500/20">Web & Mobile Development</span>
+                        <h3 class="text-lg font-bold text-slate-100 mt-2">Platform E-Commerce "Sepatopia" (React Native & React.js)</h3>
+                        <p class="text-slate-300 text-xs md:text-sm mt-1.5 leading-relaxed text-justify hyphens-auto">
+                            Berperan sebagai <b>Fullstack Developer</b> dalam merancang dan mengembangkan platform e-commerce "Sepatopia" secara menyeluruh menggunakan ekosistem React Native dan React.js.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 text-xl shrink-0 mt-1">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] bg-teal-500/10 text-teal-400 font-semibold px-2.5 py-0.5 rounded-full border border-teal-500/20">Research & Development (PKM UIR)</span>
+                        <h3 class="text-lg font-bold text-slate-100 mt-2">Alat Pemantauan Kualitas Air Berbasis IoT</h3>
+                        <p class="text-slate-300 text-xs md:text-sm mt-1.5 leading-relaxed text-justify hyphens-auto">
+                            Tergabung dalam tim riset Pekan Kreativitas Mahasiswa (PKM) Universitas Islam Riau untuk pengembangan alat pemantauan kualitas air berbasis IoT bagi masyarakat di tepian Sungai Siak.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-slate-900/40 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight"><i class="fa-solid fa-award text-sky-400 mr-2"></i> Certificates & Credentials</h2>
+                <p class="text-slate-400 mt-2 text-sm">Dokumentasi kredensial resmi, sertifikasi keahlian industri, dan penghargaan prestasi Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Sertifikat 1 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/pertamina.jpg" alt="Sertifikat Pertamina" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-emerald-500/10 text-emerald-400 font-semibold px-2.5 py-1 rounded border border-emerald-500/20"><i class="fa-solid fa-medal mr-1"></i> BUMN / Industri</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">Kerja Praktik ASP.NET Core 8</h4>
+                        <p class="text-xs text-slate-400 mt-1">PT Kilang Pertamina Internasional RU II Dumai</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 2 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between border-sky-500/30 shadow-sky-500/5">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/asisten-lab.jpg" alt="Surat Keterangan Asisten Lab" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-purple-500/10 text-purple-400 font-semibold px-2.5 py-1 rounded border border-purple-500/20"><i class="fa-solid fa-file-lines mr-1"></i> Pengalaman Kerja Resmi</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">Surat Keterangan Asisten Lab IT</h4>
+                        <p class="text-xs text-slate-400 mt-1">Laboratorium Teknik Informatika UIR (2024-2026)</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 3 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/cisco.jpg" alt="Sertifikat Cisco" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-indigo-500/10 text-indigo-400 font-semibold px-2.5 py-1 rounded border border-indigo-500/20"><i class="fa-solid fa-shield-halved mr-1"></i> Networking & Security</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">CyberOps Associate</h4>
+                        <p class="text-xs text-slate-400 mt-1">Cisco Networking Academy</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 4 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/toefl.jpg" alt="Sertifikat TOEFL" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-amber-500/10 text-amber-400 font-semibold px-2.5 py-1 rounded border border-amber-500/20"><i class="fa-solid fa-language mr-1"></i> Language Proficiency</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">TOEFL Prediction (Score: 580)</h4>
+                        <p class="text-xs text-slate-400 mt-1">Universal English Pare Kediri</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 5 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/ai.jpg" alt="Sertifikat AI" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-purple-500/10 text-purple-400 font-semibold px-2.5 py-1 rounded border border-purple-500/20"><i class="fa-solid fa-brain mr-1"></i> Artificial Intelligence</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">AI: Masa Depan Digerakkan AI</h4>
+                        <p class="text-xs text-slate-400 mt-1">IQ Primatech & Rakamin Academy</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 6 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/microsoft.jpg" alt="Sertifikat Microsoft" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-sky-500/10 text-sky-400 font-semibold px-2.5 py-1 rounded border border-sky-500/20"><i class="fa-solid fa-lock mr-1"></i> Cybersecurity</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">Introduction to Cybersecurity</h4>
+                        <p class="text-xs text-slate-400 mt-1">Microsoft & ASEAN Foundation</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 7 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/asean-cyber.jpg" alt="Sertifikat ASEAN Cyber" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-indigo-500/10 text-indigo-400 font-semibold px-2.5 py-1 rounded border border-indigo-500/20"><i class="fa-solid fa-globe mr-1"></i> Cybersecurity Program</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">ASEAN Cybersecurity Skilling Programme</h4>
+                        <p class="text-xs text-slate-400 mt-1">Microsoft, ASEAN Foundation & BullyID</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 8 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/pmm.jpg" alt="Sertifikat PMM" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-teal-500/10 text-teal-400 font-semibold px-2.5 py-1 rounded border border-teal-500/20"><i class="fa-solid fa-book-open mr-1"></i> Academic Exchange</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">Pertukaran Mahasiswa Merdeka 4</h4>
+                        <p class="text-xs text-slate-400 mt-1">Universitas Nusa Cendana</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 9 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/arduino1.jpg" alt="Sertifikat Arduino 1" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1555668793-718b2853f1c8?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-rose-500/10 text-rose-400 font-semibold px-2.5 py-1 rounded border border-rose-500/20"><i class="fa-solid fa-users mr-1"></i> Panitia & Pelatihan</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">Pelatihan Dasar Arduino Batch 1</h4>
+                        <p class="text-xs text-slate-400 mt-1">Fakultas Teknik Universitas Islam Riau</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 10 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/arduino2.jpg" alt="Sertifikat Arduino 2" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1555668793-718b2853f1c8?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-rose-500/10 text-rose-400 font-semibold px-2.5 py-1 rounded border border-rose-500/20"><i class="fa-solid fa-users mr-1"></i> Panitia & Pelatihan</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">Pelatihan Dasar Arduino Batch 2</h4>
+                        <p class="text-xs text-slate-400 mt-1">Fakultas Teknik Universitas Islam Riau</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 11 -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-slate-800 h-56 flex items-center justify-center mb-4">
+                            <img src="sertifikat/arduino3.jpg" alt="Sertifikat Arduino 3" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1555668793-718b2853f1c8?q=80&w=500&auto=format&fit=crop'">
+                        </div>
+                        <span class="text-[10px] bg-rose-500/10 text-rose-400 font-semibold px-2.5 py-1 rounded border border-rose-500/20"><i class="fa-solid fa-users mr-1"></i> Panitia & Pelatihan</span>
+                        <h4 class="font-bold text-base text-slate-100 mt-2">Pelatihan Dasar Arduino Batch 3</h4>
+                        <p class="text-xs text-slate-400 mt-1">Fakultas Teknik Universitas Islam Riau</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Kontak Section -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800/80 py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-slate-100">Let's Connect and Collaborate</h3>
+            <p class="text-slate-400 text-sm mt-2">Pekanbaru, Riau, Indonesia | <a href="mailto:ciciwelasari23dz@gmail.com" class="text-sky-400 hover:underline">ciciwelasari23dz@gmail.com</a> | <a href="https://wa.me/6282286948407" target="_blank" class="text-emerald-400 hover:underline"><i class="fab fa-whatsapp"></i> 0822-8694-8407</a></p>
+            
+            <div class="flex justify-center gap-6 mt-8">
+                <!-- Email Button -->
+                <a href="mailto:ciciwelasari23dz@gmail.com" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-sky-600 hover:text-white transition-all" title="Send Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/6282286948407" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all" title="Chat WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <!-- LinkedIn Button -->
+                <a href="https://www.linkedin.com/in/cici-wela-sari-20b07335b/" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-sky-600 hover:text-white transition-all" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- GitHub Button -->
+                <a href="https://github.com/ciwelasari23" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all" title="GitHub Repository">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+            <p class="text-xs text-slate-600 mt-12">&copy; 2026 Cici Wela Sari. Built with dedication & excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript untuk Menu Mobile -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menutup menu otomatis ketika salah satu link diklik
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
