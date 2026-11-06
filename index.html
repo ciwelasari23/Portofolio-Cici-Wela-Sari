@@ -66,25 +66,21 @@
     <!-- Backdrop Gelap untuk Menu Mobile -->
     <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden md:hidden transition-opacity duration-300 opacity-0"></div>
 
-    <!-- Sidebar Drawer Menu Mobile (Setengah Layar & Full ke Bawah) -->
+    <!-- Sidebar Drawer Menu Mobile -->
     <aside id="mobile-menu" class="fixed top-0 left-0 bottom-0 w-[75%] max-w-[300px] bg-[#141017] border-r border-pink-950/80 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between p-6 shadow-2xl overflow-y-auto">
-        <!-- Bagian Atas: Profil & Menu Navigasi -->
         <div>
-            <!-- Tombol Close (X) di Kanan Atas -->
             <div class="flex justify-end mb-2">
                 <button id="close-menu" class="text-pink-200/70 hover:text-white text-xl p-1 focus:outline-none">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
-            <!-- Info Profil Rapi (Foto di Atas, Nama & Role di Bawahnya) -->
             <div class="pb-6 mb-6 border-b border-pink-950/80">
                 <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-16 h-16 rounded-full object-cover border-2 border-pink-500/40 mb-3.5 shadow-md" onerror="this.src='foto-profil.jpg'">
                 <h4 class="text-base font-bold text-white tracking-tight">Cici Wela Sari, S.T.</h4>
                 <p class="text-xs text-pink-300/70 mt-0.5">Software Engineer & Data Analyst</p>
             </div>
 
-            <!-- Daftar Link Navigasi -->
             <nav class="space-y-3.5">
                 <a href="#about" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
                     <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">01</span>
@@ -121,7 +117,6 @@
             </nav>
         </div>
 
-        <!-- Bagian Bawah Sidebar: Status & Hak Cipta -->
         <div class="pt-6 border-t border-pink-950/60 mt-8">
             <div class="flex items-center gap-2.5 text-xs text-pink-300/80 mb-2">
                 <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
@@ -133,7 +128,7 @@
 
     <!-- Hero Section -->
     <section id="about" class="max-w-7xl mx-auto px-6 pt-36 pb-20 md:pt-44 md:pb-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-        <!-- Foto Profil / Wisuda (Statis / Tanpa Animasi) -->
+        <!-- Foto Profil / Wisuda -->
         <div class="md:col-span-5 flex justify-center order-1 md:order-2">
             <div class="relative w-72 h-96 rounded-3xl overflow-hidden glass-card p-2 border-2 border-pink-500/30 shadow-2xl">
                 <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-full h-full object-cover rounded-2xl" onerror="this.src='foto-profil.jpg'">
@@ -174,14 +169,15 @@
                 </div>
             </div>
 
-            <div class="flex flex-wrap gap-4 pt-2">
-                <a href="https://www.linkedin.com/in/cici-wela-sari-20b07335b/" target="_blank" class="bg-pink-500 hover:bg-pink-400 text-white font-bold px-6 py-3 rounded-xl shadow-md transition-all flex items-center gap-2 text-sm">
+            <!-- Tombol Aksi (Diatur agar selalu sejajar berdampingan tanpa turun di mobile) -->
+            <div class="flex flex-row flex-wrap gap-2.5 pt-2">
+                <a href="https://www.linkedin.com/in/cici-wela-sari-20b07335b/" target="_blank" class="bg-pink-500 hover:bg-pink-400 text-white font-bold px-4 md:px-6 py-2.5 md:py-3 rounded-xl shadow-md transition-all flex items-center gap-1.5 text-xs md:text-sm">
                     <i class="fab fa-linkedin-in"></i> LinkedIn
                 </a>
-                <a href="https://github.com/ciwelasari23" target="_blank" class="glass-card hover:bg-pink-950/30 text-pink-200 font-medium px-6 py-3 rounded-xl transition-all flex items-center gap-2 text-sm">
+                <a href="https://github.com/ciwelasari23" target="_blank" class="glass-card hover:bg-pink-950/30 text-pink-200 font-medium px-4 md:px-6 py-2.5 md:py-3 rounded-xl transition-all flex items-center gap-1.5 text-xs md:text-sm">
                     <i class="fab fa-github"></i> GitHub
                 </a>
-                <a href="https://wa.me/6282286948407?text=Halo%20Kak%20Cici%20Wela%20Sari,%20S.T.,%0A%0ASaya%20melihat%20portofolio%20dan%20CV%20Anda,%20dan%20kami%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20kerja%20posisi%20Software%20Engineer%20/%20Data%20Analyst%20di%20perusahaan%20kami.%0A%0ATerima%20kasih." target="_blank" class="glass-card hover:bg-pink-950/30 text-pink-300 font-medium px-6 py-3 rounded-xl transition-all flex items-center gap-2 text-sm">
+                <a href="https://wa.me/6282286948407?text=Halo%20Kak%20Cici%20Wela%20Sari,%20S.T.,%0A%0ASaya%20melihat%20portofolio%20dan%20CV%20Anda,%20dan%20kami%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20kerja%20posisi%20Software%20Engineer%20/%20Data%20Analyst%20di%20perusahaan%20kami.%0A%0ATerima%20kasih." target="_blank" class="glass-card hover:bg-pink-950/30 text-pink-300 font-medium px-4 md:px-6 py-2.5 md:py-3 rounded-xl transition-all flex items-center gap-1.5 text-xs md:text-sm">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
@@ -259,7 +255,7 @@
                     <div>
                         <span class="text-xs bg-pink-500/10 text-pink-300 font-semibold px-3 py-1 rounded-full border border-pink-500/20"><i class="fa-solid fa-university mr-1"></i> Universitas Islam Riau</span>
                         <h3 class="text-xl font-bold text-white mt-4">Sarjana Teknik (S.T.) - Teknik Informatika</h3>
-                        <p class="text-pink-400 text-xs font-medium mt-1">Kelas Internasional | Lulus Predikat Cumlaude (Masa studi 3,5 Tahun)</p>
+                        <p class="text-pink-400 text-xs font-medium mt-1">Lulus Predikat Cumlaude (Masa studi 3,5 Tahun)</p>
                         <p class="text-pink-100/80 text-sm md:text-base mt-3 leading-relaxed justify-text">
                             Aktif mendalami rekayasa perangkat lunak, sistem basis data, dan analisis data. Menyelesaikan skripsi riset data medis rumah sakit menggunakan algoritma Random Forest dan C4.5.
                         </p>
@@ -353,7 +349,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Organisasi 1: Groot Robotica UIR -->
                 <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
@@ -362,29 +357,28 @@
                             </span>
                             <span class="text-xs text-pink-300/60 font-medium">Feb 2023 - Des 2025 | Pekanbaru, Riau</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Sekretaris Organisasi</h3>
+                        <h3 class="text-xl font-bold text-white">Sekretaris Organisasi[cite: 14]</h3>
                         <p class="text-pink-400 text-xs font-medium mt-1 mb-3">Organisasi Robotika & Inovasi Teknologi Mahasiswa</p>
                         <ul class="space-y-2 text-pink-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
-                            <li>Mengelola administrasi organisasi, tata persuratan resmi, dan penyusunan Laporan Pertanggungjawaban (LPJ) program kerja tahunan secara terstruktur.</li>
-                            <li>Mengkoordinasikan lebih dari 10+ kegiatan dan pelatihan kerja organisasi, serta memodernisasi sistem pengarsipan dokumen yang meningkatkan efisiensi administrasi hingga <b>+25%</b>.</li>
+                            <li>Mengelola administrasi organisasi, tata persuratan resmi, dan penyusunan Laporan Pertanggungjawaban (LPJ) program kerja tahunan secara terstruktur[cite: 14].</li>
+                            <li>Mengkoordinasikan lebih dari 10+ kegiatan dan pelatihan kerja organisasi, serta memodernisasi sistem pengarsipan dokumen yang meningkatkan efisiensi administrasi hingga <b>+25%</b>[cite: 14].</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Organisasi 2: Mentor KIP-K & Relawan Sensus -->
                 <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
                             <span class="text-xs bg-rose-500/10 text-rose-300 font-semibold px-3 py-1 rounded-full border border-rose-500/20">
                                 <i class="fa-solid fa-hands-helping mr-1.5"></i> Universitas Islam Riau / Kenagarian Pangkalan
                             </span>
-                            <span class="text-xs text-pink-300/60 font-medium">2021 - 2026 | Pekanbaru & Sumbar</span>
+                            <span class="text-xs text-pink-300/60 font-medium">2021 - 2026 | Pekanbaru & Sumbar[cite: 14]</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Mentor KIP-K & Relawan Sensus Kependudukan</h3>
+                        <h3 class="text-xl font-bold text-white">Mentor KIP-K & Relawan Sensus Kependudukan[cite: 14]</h3>
                         <p class="text-rose-400 text-xs font-medium mt-1 mb-3">Pendampingan Akademik & Pengabdian Masyarakat</p>
                         <ul class="space-y-2 text-pink-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
-                            <li>Berperan aktif sebagai <b>Mentor</b> bagi mahasiswa penerima beasiswa KIP Kuliah Angkatan 2025 dalam program pendampingan akademik dan adaptasi perkuliahan.</li>
-                            <li>Berkontribusi sebagai <b>Relawan Sensus Kependudukan</b> di Kenagarian Pangkalan Koto Baru (2020) untuk pendataan dan verifikasi informasi demografi warga secara akurat.</li>
+                            <li>Berperan aktif sebagai <b>Mentor</b> bagi mahasiswa penerima beasiswa KIP Kuliah Angkatan 2025 dalam program pendampingan akademik dan adaptasi perkuliahan[cite: 14].</li>
+                            <li>Berkontribusi sebagai <b>Relawan Sensus Kependudukan</b> di Kenagarian Pangkalan Koto Baru (2021) untuk pendataan dan verifikasi informasi demografi warga secara akurat[cite: 14].</li>
                         </ul>
                     </div>
                 </div>
