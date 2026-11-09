@@ -11,17 +11,17 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #120f14; color: #f3e8f6; }
+        body { font-family: 'Inter', sans-serif; background-color: #0b1329; color: #e2e8f0; }
         h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
         .glass-card {
-            background: rgba(26, 20, 30, 0.75);
+            background: rgba(15, 23, 42, 0.75);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(244, 114, 182, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.12);
             transition: all 0.3s ease;
         }
         .glass-card:hover {
-            border-color: rgba(244, 114, 182, 0.4);
-            box-shadow: 0 12px 30px -10px rgba(244, 114, 182, 0.15);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(56, 189, 248, 0.15);
             transform: translateY(-2px);
         }
         .justify-text {
@@ -30,34 +30,34 @@
         }
     </style>
 </head>
-<body class="selection:bg-pink-500 selection:text-white min-h-screen">
+<body class="selection:bg-sky-500 selection:text-white min-h-screen">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-pink-950/80">
+    <header class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-sky-950/80">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <button id="menu-btn" class="text-pink-300 hover:text-white focus:outline-none text-xl md:hidden">
+                <button id="menu-btn" class="text-sky-300 hover:text-white focus:outline-none text-xl md:hidden">
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <a href="#" class="text-lg font-extrabold tracking-tight text-white flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-pink-400"></span> Cici Wela Sari<span class="text-pink-400">.</span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span> Cici Wela Sari<span class="text-sky-400">.</span>
                 </a>
             </div>
             
-            <nav class="hidden lg:flex space-x-5 text-xs xl:text-sm font-medium text-pink-200/70">
-                <a href="#about" class="hover:text-pink-400 transition">01. About</a>
-                <a href="#skills" class="hover:text-pink-400 transition">02. Skills</a>
-                <a href="#education" class="hover:text-pink-400 transition">03. Education</a>
-                <a href="#experience" class="hover:text-pink-400 transition">04. Experience</a>
-                <a href="#organization" class="hover:text-pink-400 transition">05. Organization</a>
-                <a href="#projects" class="hover:text-pink-400 transition">06. Projects</a>
-                <a href="#certificates" class="hover:text-pink-400 transition">07. Certificates</a>
-                <a href="#contact" class="hover:text-pink-400 transition">08. Contact</a>
+            <nav class="hidden lg:flex space-x-5 text-xs xl:text-sm font-medium text-sky-200/70">
+                <a href="#about" class="hover:text-sky-400 transition">01. About</a>
+                <a href="#skills" class="hover:text-sky-400 transition">02. Skills</a>
+                <a href="#education" class="hover:text-sky-400 transition">03. Education</a>
+                <a href="#experience" class="hover:text-sky-400 transition">04. Experience</a>
+                <a href="#organization" class="hover:text-sky-400 transition">05. Organization</a>
+                <a href="#projects" class="hover:text-sky-400 transition">06. Projects</a>
+                <a href="#certificates" class="hover:text-sky-400 transition">07. Certificates</a>
+                <a href="#contact" class="hover:text-sky-400 transition">08. Contact</a>
             </nav>
 
             <div class="hidden md:block">
-                <span class="inline-flex items-center gap-2 bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-semibold px-3 py-1.5 rounded-full">
-                    <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span> Tersedia untuk Proyek
+                <span class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs font-semibold px-3 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> Tersedia untuk Proyek
                 </span>
             </div>
         </div>
@@ -67,62 +67,62 @@
     <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden md:hidden transition-opacity duration-300 opacity-0"></div>
 
     <!-- Sidebar Drawer Menu Mobile -->
-    <aside id="mobile-menu" class="fixed top-0 left-0 bottom-0 w-[75%] max-w-[300px] bg-[#141017] border-r border-pink-950/80 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between p-6 shadow-2xl overflow-y-auto">
+    <aside id="mobile-menu" class="fixed top-0 left-0 bottom-0 w-[75%] max-w-[300px] bg-[#0d1633] border-r border-sky-950/80 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between p-6 shadow-2xl overflow-y-auto">
         <div>
             <div class="flex justify-end mb-2">
-                <button id="close-menu" class="text-pink-200/70 hover:text-white text-xl p-1 focus:outline-none">
+                <button id="close-menu" class="text-sky-200/70 hover:text-white text-xl p-1 focus:outline-none">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
-            <div class="pb-6 mb-6 border-b border-pink-950/80">
-                <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-16 h-16 rounded-full object-cover border-2 border-pink-500/40 mb-3.5 shadow-md" onerror="this.src='foto-profil.jpg'">
+            <div class="pb-6 mb-6 border-b border-sky-950/80">
+                <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-16 h-16 rounded-full object-cover border-2 border-sky-500/40 mb-3.5 shadow-md" onerror="this.src='foto-profil.jpg'">
                 <h4 class="text-base font-bold text-white tracking-tight">Cici Wela Sari, S.T.</h4>
-                <p class="text-xs text-pink-300/70 mt-0.5">Software Engineer & Data Analyst</p>
+                <p class="text-xs text-sky-300/70 mt-0.5">Software Engineer & Data Analyst</p>
             </div>
 
             <nav class="space-y-3.5">
-                <a href="#about" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
-                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">01</span>
+                <a href="#about" class="flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 transition py-1 group">
+                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">01</span>
                     <span class="font-medium">About</span>
                 </a>
-                <a href="#skills" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
-                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">02</span>
+                <a href="#skills" class="flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 transition py-1 group">
+                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">02</span>
                     <span class="font-medium">Skills & Languages</span>
                 </a>
-                <a href="#education" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
-                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">03</span>
+                <a href="#education" class="flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 transition py-1 group">
+                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">03</span>
                     <span class="font-medium">Education</span>
                 </a>
-                <a href="#experience" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
-                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">04</span>
+                <a href="#experience" class="flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 transition py-1 group">
+                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">04</span>
                     <span class="font-medium">Experience</span>
                 </a>
-                <a href="#organization" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
-                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">05</span>
+                <a href="#organization" class="flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 transition py-1 group">
+                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">05</span>
                     <span class="font-medium">Organization</span>
                 </a>
-                <a href="#projects" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
-                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">06</span>
+                <a href="#projects" class="flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 transition py-1 group">
+                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">06</span>
                     <span class="font-medium">Projects</span>
                 </a>
-                <a href="#certificates" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
-                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">07</span>
+                <a href="#certificates" class="flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 transition py-1 group">
+                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">07</span>
                     <span class="font-medium">Certificates</span>
                 </a>
-                <a href="#contact" class="flex items-center gap-4 text-sm text-pink-100/80 hover:text-pink-400 transition py-1 group">
-                    <span class="text-xs font-mono text-pink-400/60 group-hover:text-pink-400">08</span>
+                <a href="#contact" class="flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 transition py-1 group">
+                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">08</span>
                     <span class="font-medium">Contact</span>
                 </a>
             </nav>
         </div>
 
-        <div class="pt-6 border-t border-pink-950/60 mt-8">
-            <div class="flex items-center gap-2.5 text-xs text-pink-300/80 mb-2">
-                <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+        <div class="pt-6 border-t border-sky-950/60 mt-8">
+            <div class="flex items-center gap-2.5 text-xs text-sky-300/80 mb-2">
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
                 <span>Tersedia untuk proyek baru</span>
             </div>
-            <p class="text-[11px] text-pink-300/40">&copy; 2026 Cici Wela Sari. All Rights Reserved.</p>
+            <p class="text-[11px] text-sky-300/40">&copy; 2026 Cici Wela Sari. All Rights Reserved.</p>
         </div>
     </aside>
 
@@ -130,54 +130,54 @@
     <section id="about" class="max-w-7xl mx-auto px-6 pt-36 pb-20 md:pt-44 md:pb-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         <!-- Foto Profil / Wisuda -->
         <div class="md:col-span-5 flex justify-center order-1 md:order-2">
-            <div class="relative w-72 h-96 rounded-3xl overflow-hidden glass-card p-2 border-2 border-pink-500/30 shadow-2xl">
+            <div class="relative w-72 h-96 rounded-3xl overflow-hidden glass-card p-2 border-2 border-sky-500/30 shadow-2xl">
                 <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-full h-full object-cover rounded-2xl" onerror="this.src='foto-profil.jpg'">
-                <div class="absolute bottom-4 left-4 right-4 bg-zinc-950/85 backdrop-blur-md p-3 rounded-xl border border-pink-950 text-center">
-                    <p class="text-xs font-bold text-pink-400">Cici Wela Sari, S.T.</p>
-                    <p class="text-[10px] text-pink-200/70">Software Engineer & Data Analyst</p>
+                <div class="absolute bottom-4 left-4 right-4 bg-slate-950/85 backdrop-blur-md p-3 rounded-xl border border-sky-950 text-center">
+                    <p class="text-xs font-bold text-sky-400">Cici Wela Sari, S.T.</p>
+                    <p class="text-[10px] text-sky-200/70">Software Engineer & Data Analyst</p>
                 </div>
             </div>
         </div>
 
         <!-- Teks Summary -->
         <div class="md:col-span-7 space-y-6 order-2 md:order-1">
-            <div class="inline-flex items-center gap-2 bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-semibold px-4 py-1.5 rounded-full">
-                <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+            <div class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs font-semibold px-4 py-1.5 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
                 Fresh Graduate S1 Teknik Informatika | IPK 3.90 (Cumlaude)
             </div>
             
             <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
-                Menjembatani <span class="text-pink-400">Sistem & Data</span> dengan Presisi Tinggi.
+                Menjembatani <span class="text-sky-400">Sistem & Data</span> dengan Presisi Tinggi.
             </h1>
             
-            <p class="text-pink-100/80 text-sm md:text-base leading-relaxed justify-text">
-                Fresh graduate S1 Teknik Informatika,predikat Cumlaude (IPK 3.90/4.00) dengan spesialisasi komprehensif dalam pengembangan perangkat lunak (Software Development) dan pengolahan data (Data Analysis). Memiliki pengalaman nyata di instansi pemerintah dan BUMN (BPS Provinsi Riau & PT Kilang Pertamina Internasional RU II Dumai) dalam merancang aplikasi <i>end-to-end</i> (Laravel, ASP.NET Core) serta mengolah data statistik berskala besar. Memiliki <i>learning agility</i> tinggi, pemikiran analitis tajam, serta kemampuan teknis kuat untuk <b>menjembatani rekayasa sistem dan wawasan berbasis data</b>.
+            <p class="text-sky-100/80 text-sm md:text-base leading-relaxed justify-text">
+                Fresh graduate S1 Teknik Informatika, berpredikat Cumlaude (IPK 3.90/4.00) dengan spesialisasi komprehensif dalam pengembangan perangkat lunak (Software Development) dan pengolahan data (Data Analysis). Memiliki pengalaman nyata di instansi pemerintah dan BUMN (BPS Provinsi Riau & PT Kilang Pertamina Internasional RU II Dumai) dalam merancang aplikasi <i>end-to-end</i> (Laravel, ASP.NET Core) serta mengolah data statistik berskala besar. Memiliki <i>learning agility</i> tinggi, pemikiran analitis tajam, serta kemampuan teknis kuat untuk <b>menjembatani rekayasa sistem dan wawasan berbasis data</b>[cite: 4, 6].
             </p>
             
-            <div class="grid grid-cols-3 gap-4 py-2 border-y border-pink-950/60">
+            <div class="grid grid-cols-3 gap-4 py-2 border-y border-sky-950/60">
                 <div>
                     <p class="text-2xl md:text-3xl font-extrabold text-white">3.5</p>
-                    <p class="text-xs text-pink-300/70 mt-0.5">Tahun Masa Studi</p>
+                    <p class="text-xs text-sky-300/70 mt-0.5">Tahun Masa Studi</p>
                 </div>
                 <div>
                     <p class="text-2xl md:text-3xl font-extrabold text-white">3.90</p>
-                    <p class="text-xs text-pink-300/70 mt-0.5">IPK (Cumlaude)</p>
+                    <p class="text-xs text-sky-300/70 mt-0.5">IPK (Cumlaude)</p>
                 </div>
                 <div>
                     <p class="text-2xl md:text-3xl font-extrabold text-white">11+</p>
-                    <p class="text-xs text-pink-300/70 mt-0.5">Sertifikasi & Kredensial</p>
+                    <p class="text-xs text-sky-300/70 mt-0.5">Sertifikasi & Kredensial</p>
                 </div>
             </div>
 
-            <!-- Tombol Aksi (Diatur flex-row dan gap lebih kecil agar stabil satu baris di HP) -->
+            <!-- Tombol Aksi -->
             <div class="flex flex-row items-center gap-2 pt-2 overflow-x-auto">
-                <a href="https://www.linkedin.com/in/cici-wela-sari-20b07335b/" target="_blank" class="bg-pink-500 hover:bg-pink-400 text-white font-bold px-3.5 py-2.5 rounded-xl shadow-md transition-all flex items-center gap-1.5 text-xs whitespace-nowrap">
+                <a href="https://www.linkedin.com/in/cici-wela-sari-20b07335b/" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white font-bold px-3.5 py-2.5 rounded-xl shadow-md transition-all flex items-center gap-1.5 text-xs whitespace-nowrap">
                     <i class="fab fa-linkedin-in"></i> LinkedIn
                 </a>
-                <a href="https://github.com/ciwelasari23" target="_blank" class="glass-card hover:bg-pink-950/30 text-pink-200 font-medium px-3.5 py-2.5 rounded-xl transition-all flex items-center gap-1.5 text-xs whitespace-nowrap">
+                <a href="https://github.com/ciwelasari23" target="_blank" class="glass-card hover:bg-sky-950/30 text-sky-200 font-medium px-3.5 py-2.5 rounded-xl transition-all flex items-center gap-1.5 text-xs whitespace-nowrap">
                     <i class="fab fa-github"></i> GitHub
                 </a>
-                <a href="https://wa.me/6282286948407?text=Halo%20Kak%20Cici%20Wela%20Sari,%20S.T.,%0A%0ASaya%20melihat%20portofolio%20Anda,%20dan%20kami%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20kerja%20posisi%20Software%20Engineer%20/%20Data%20Analyst%20di%20perusahaan%20kami.%0A%0ATerima%20kasih." target="_blank" class="glass-card hover:bg-pink-950/30 text-pink-300 font-medium px-3.5 py-2.5 rounded-xl transition-all flex items-center gap-1.5 text-xs whitespace-nowrap">
+                <a href="https://wa.me/6282286948407?text=Halo%20Kak%20Cici%20Wela%20Sari,%20S.T.,%0A%0ASaya%20melihat%20portofolio%20Anda,%20dan%20kami%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20kerja%20posisi%20Software%20Engineer%20/%20Data%20Analyst%20di%20perusahaan%20kami.%0A%0ATerima%20kasih." target="_blank" class="glass-card hover:bg-sky-950/30 text-sky-300 font-medium px-3.5 py-2.5 rounded-xl transition-all flex items-center gap-1.5 text-xs whitespace-nowrap">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
@@ -185,52 +185,52 @@
     </section>
 
     <!-- Technical, Soft Skills & Languages Section -->
-    <section id="skills" class="py-20 bg-pink-950/20 border-y border-pink-950/50">
+    <section id="skills" class="py-20 bg-sky-950/20 border-y border-sky-950/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">02. SKILLS & LANGUAGES</p>
+                <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">02. SKILLS & LANGUAGES</p>
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Technical, Soft Skills & Languages</h2>
-                <p class="text-pink-300/70 mt-2 text-sm">Kompetensi stack teknologi, keterampilan penunjang kerja, dan penguasaan bahasa.</p>
+                <p class="text-sky-300/70 mt-2 text-sm">Kompetensi stack teknologi, keterampilan penunjang kerja, dan penguasaan bahasa.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 <div class="glass-card p-6 rounded-2xl">
-                    <div class="text-pink-400 text-2xl mb-4"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="text-sky-400 text-2xl mb-4"><i class="fa-solid fa-laptop-code"></i></div>
                     <h3 class="font-bold text-base text-white mb-2">Programming & Frameworks</h3>
-                    <p class="text-xs md:text-sm text-pink-100/80 leading-relaxed justify-text">ASP.NET Core 8, Laravel, Python, PHP, C#, Java, C++, JavaScript, React Native, React.js, RESTful API.</p>
+                    <p class="text-xs md:text-sm text-sky-100/80 leading-relaxed justify-text">ASP.NET Core 8, Laravel, Python, PHP, C#, Java, C++, JavaScript, React Native, React.js, RESTful API[cite: 4].</p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl">
-                    <div class="text-rose-400 text-2xl mb-4"><i class="fa-solid fa-database"></i></div>
+                    <div class="text-cyan-400 text-2xl mb-4"><i class="fa-solid fa-database"></i></div>
                     <h3 class="font-bold text-base text-white mb-2">Database & Data Analysis</h3>
-                    <p class="text-xs md:text-sm text-pink-100/80 leading-relaxed justify-text">SQL Server (SSMS), MySQL Workbench, Pandas, Scikit-learn, Exploratory Data Analysis (EDA), Random Forest & C4.5.</p>
+                    <p class="text-xs md:text-sm text-sky-100/80 leading-relaxed justify-text">SQL Server (SSMS), MySQL Workbench, Pandas, Scikit-learn, Exploratory Data Analysis (EDA), Random Forest & C4.5[cite: 4].</p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl">
-                    <div class="text-purple-400 text-2xl mb-4"><i class="fa-solid fa-tools"></i></div>
+                    <div class="text-indigo-400 text-2xl mb-4"><i class="fa-solid fa-tools"></i></div>
                     <h3 class="font-bold text-base text-white mb-2">IT Support & Tools</h3>
-                    <p class="text-xs md:text-sm text-pink-100/80 leading-relaxed justify-text">Hardware/Software Troubleshooting, Computer Networking, Cisco Packet Tracer, Git/GitHub, Visual Studio Code.</p>
+                    <p class="text-xs md:text-sm text-sky-100/80 leading-relaxed justify-text">Hardware/Software Troubleshooting, Computer Networking, Cisco Packet Tracer, Git/GitHub, Visual Studio Code[cite: 4].</p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl">
-                    <div class="text-fuchsia-400 text-2xl mb-4"><i class="fa-solid fa-users-gear"></i></div>
+                    <div class="text-blue-400 text-2xl mb-4"><i class="fa-solid fa-users-gear"></i></div>
                     <h3 class="font-bold text-base text-white mb-2">Soft Skills</h3>
-                    <p class="text-xs md:text-sm text-pink-100/80 leading-relaxed justify-text">Analytical Thinking, Problem Solving, Team Collaboration, Detail-Oriented, Time Management, Leadership.</p>
+                    <p class="text-xs md:text-sm text-sky-100/80 leading-relaxed justify-text">Analytical Thinking, Problem Solving, Team Collaboration, Detail-Oriented, Time Management, Leadership[cite: 4].</p>
                 </div>
-                <div class="glass-card p-6 rounded-2xl border-pink-500/30">
-                    <div class="text-pink-300 text-2xl mb-4"><i class="fa-solid fa-language"></i></div>
+                <div class="glass-card p-6 rounded-2xl border-sky-500/30">
+                    <div class="text-sky-300 text-2xl mb-4"><i class="fa-solid fa-language"></i></div>
                     <h3 class="font-bold text-base text-white mb-3">Languages</h3>
                     <div class="space-y-3 text-xs md:text-sm">
                         <div>
                             <div class="flex justify-between items-center font-semibold text-white">
                                 <span>Bahasa Indonesia</span>
-                                <span class="text-[10px] bg-pink-500/20 text-pink-300 px-2 py-0.5 rounded-full border border-pink-500/30">Fasih / Native</span>
+                                <span class="text-[10px] bg-sky-500/20 text-sky-300 px-2 py-0.5 rounded-full border border-sky-500/30">Fasih / Native</span>
                             </div>
-                            <p class="text-[11px] text-pink-200/60 mt-0.5">Komunikasi profesional & penulisan akademik</p>
+                            <p class="text-[11px] text-sky-200/60 mt-0.5">Kompetensi profesional penuh</p>
                         </div>
-                        <div class="pt-2 border-t border-pink-950/60">
+                        <div class="pt-2 border-t border-sky-950/60">
                             <div class="flex justify-between items-center font-semibold text-white">
                                 <span>Bahasa Inggris</span>
-                                <span class="text-[10px] bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded-full border border-rose-500/30">Profesional</span>
+                                <span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-500/30">Profesional</span>
                             </div>
-                            <p class="text-[11px] text-pink-200/60 mt-0.5">Kelas Internasional | Skor TOEFL: 580</p>
+                            <p class="text-[11px] text-sky-200/60 mt-0.5">Kelas Internasional | Skor TOEFL: 580[cite: 6]</p>
                         </div>
                     </div>
                 </div>
@@ -242,36 +242,36 @@
     <section id="education" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">03. EDUCATION</p>
+                <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">03. EDUCATION</p>
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Latar Belakang Akademik</h2>
-                <p class="text-pink-300/70 mt-2 text-sm">Pencapaian akademik unggul dengan dedikasi tinggi di institusi terkemuka.</p>
+                <p class="text-sky-300/70 mt-2 text-sm">Pencapaian akademik unggul dengan dedikasi tinggi di institusi terkemuka.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="glass-card p-8 rounded-2xl relative overflow-hidden flex flex-col justify-between">
-                    <div class="absolute top-0 right-0 bg-pink-500 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow">
+                    <div class="absolute top-0 right-0 bg-sky-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow">
                         IPK 3.90 / 4.00
                     </div>
                     <div>
-                        <span class="text-xs bg-pink-500/10 text-pink-300 font-semibold px-3 py-1 rounded-full border border-pink-500/20"><i class="fa-solid fa-university mr-1"></i> Universitas Islam Riau</span>
+                        <span class="text-xs bg-sky-500/10 text-sky-300 font-semibold px-3 py-1 rounded-full border border-sky-500/20"><i class="fa-solid fa-university mr-1"></i> Universitas Islam Riau</span>
                         <h3 class="text-xl font-bold text-white mt-4">Sarjana Teknik (S.T.) - Teknik Informatika</h3>
-                        <p class="text-pink-400 text-xs font-medium mt-1">Lulus Predikat Cumlaude (Masa studi 3,5 Tahun)</p>
-                        <p class="text-pink-100/80 text-sm md:text-base mt-3 leading-relaxed justify-text">
-                            Aktif mendalami rekayasa perangkat lunak, sistem basis data, dan analisis data. Menyelesaikan skripsi riset data medis rumah sakit menggunakan algoritma Random Forest dan C4.5.
+                        <p class="text-sky-400 text-xs font-medium mt-1">Lulus Predikat Cumlaude (Masa studi 3,5 Tahun)</p>
+                        <p class="text-sky-100/80 text-sm md:text-base mt-3 leading-relaxed justify-text">
+                            Aktif mendalami rekayasa perangkat lunak, sistem basis data, dan analisis data. Menyelesaikan skripsi riset data medis rumah sakit menggunakan algoritma Random Forest dan C4.5[cite: 6].
                         </p>
                     </div>
                 </div>
 
                 <div class="glass-card p-8 rounded-2xl relative overflow-hidden flex flex-col justify-between">
-                    <div class="absolute top-0 right-0 bg-rose-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow">
+                    <div class="absolute top-0 right-0 bg-cyan-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow">
                         IPK 4.00 / 4.00
                     </div>
                     <div>
-                        <span class="text-xs bg-rose-500/10 text-rose-300 font-semibold px-3 py-1 rounded-full border border-rose-500/20"><i class="fa-solid fa-exchange-alt mr-1"></i> Universitas Nusa Cendana</span>
+                        <span class="text-xs bg-cyan-500/10 text-cyan-300 font-semibold px-3 py-1 rounded-full border border-cyan-500/20"><i class="fa-solid fa-exchange-alt mr-1"></i> Universitas Nusa Cendana</span>
                         <h3 class="text-xl font-bold text-white mt-4">Program Pertukaran Mahasiswa Merdeka (PMM 4)</h3>
-                        <p class="text-rose-400 text-xs font-medium mt-1">Studi Lintas Disiplin Ilmu Komputer & Teknik Elektro</p>
-                        <p class="text-pink-100/80 text-sm md:text-base mt-3 leading-relaxed justify-text">
-                            Terpilih secara nasional untuk mengikuti program pertukaran pelajar guna memperdalam wawasan keilmuan teknologi dan memperluas kolaborasi lintas budaya.
+                        <p class="text-cyan-400 text-xs font-medium mt-1">Studi Lintas Disiplin Ilmu Komputer & Teknik Elektro</p>
+                        <p class="text-sky-100/80 text-sm md:text-base mt-3 leading-relaxed justify-text">
+                            Terpilih secara nasional untuk mengikuti program pertukaran pelajar guna memperdalam wawasan keilmuan teknologi dan memperluas kolaborasi lintas budaya[cite: 6].
                         </p>
                     </div>
                 </div>
@@ -280,27 +280,27 @@
     </section>
 
     <!-- Work Experience Section -->
-    <section id="experience" class="py-20 bg-pink-950/20 border-y border-pink-950/50">
+    <section id="experience" class="py-20 bg-sky-950/20 border-y border-sky-950/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">04. WORK EXPERIENCE</p>
+                <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">04. WORK EXPERIENCE</p>
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Pengalaman Kerja Profesional</h2>
-                <p class="text-pink-300/70 mt-2 text-sm">Kontribusi nyata dalam rekayasa sistem, pengembangan aplikasi, dan pengajaran akademik.</p>
+                <p class="text-sky-300/70 mt-2 text-sm">Kontribusi nyata dalam rekayasa sistem, pengembangan aplikasi, dan pengajaran akademik.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
-                            <span class="text-[11px] bg-pink-500/10 text-pink-300 font-semibold px-3 py-1 rounded-full border border-pink-500/20"><i class="fa-solid fa-building-columns mr-1"></i> BPS Provinsi Riau</span>
-                            <span class="text-[11px] text-pink-300/60">Agu 2026 - Sekarang</span>
+                            <span class="text-[11px] bg-sky-500/10 text-sky-300 font-semibold px-3 py-1 rounded-full border border-sky-500/20"><i class="fa-solid fa-building-columns mr-1"></i> BPS Provinsi Riau</span>
+                            <span class="text-[11px] text-sky-300/60">Agu 2026 - Sekarang</span>
                         </div>
                         <h3 class="text-lg font-bold text-white mb-3">Asisten Pranata Komputer (MagangHub)</h3>
-                        <ul class="space-y-2.5 text-pink-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
-                            <li>Diterima melalui seleksi ketat MagangHub di BPS Provinsi Riau.</li>
-                            <li>Berperan sebagai <b>Software Engineer & Full-Stack Developer</b> membangun aplikasi "MENTARI" (Monitoring Kegiatan Terintegrasi) dengan PHP, Laravel, & MySQL.</li>
-                            <li>Melakukan entri dan pengolahan data statistik Sensus Ekonomi 2026 dengan ketelitian dan akurasi tinggi.</li>
-                            <li>Mendukung operasional administrasi data, verifikasi sistem, serta pemeliharaan infrastruktur TI.</li>
+                        <ul class="space-y-2.5 text-sky-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
+                            <li>Diterima melalui seleksi ketat MagangHub di BPS Provinsi Riau[cite: 4].</li>
+                            <li>Berperan sebagai <b>Software Engineer & Full-Stack Developer</b> membangun aplikasi "MENTARI" (Monitoring Kegiatan Terintegrasi) dengan PHP, Laravel, & MySQL[cite: 4].</li>
+                            <li>Melakukan entri dan pengolahan data statistik Sensus Ekonomi 2026 dengan ketelitian dan akurasi tinggi[cite: 4].</li>
+                            <li>Mendukung operasional administrasi data, verifikasi sistem, serta pemeliharaan infrastruktur TI[cite: 4].</li>
                         </ul>
                     </div>
                 </div>
@@ -308,15 +308,15 @@
                 <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
-                            <span class="text-[11px] bg-rose-500/10 text-rose-300 font-semibold px-3 py-1 rounded-full border border-rose-500/20"><i class="fa-solid fa-industry mr-1"></i> PT Kilang Pertamina</span>
-                            <span class="text-[11px] text-pink-300/60">Jul 2025 - Agu 2025</span>
+                            <span class="text-[11px] bg-cyan-500/10 text-cyan-300 font-semibold px-3 py-1 rounded-full border border-cyan-500/20"><i class="fa-solid fa-industry mr-1"></i> PT Kilang Pertamina</span>
+                            <span class="text-[11px] text-sky-300/60">Jul 2025 - Agu 2025</span>
                         </div>
                         <h3 class="text-lg font-bold text-white mb-3">Programmer Intern (Kerja Praktik)</h3>
-                        <ul class="space-y-2.5 text-pink-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
-                            <li>Merancang dan mengembangkan Dashboard Admin Customer Service Chatbot AI menggunakan ASP.NET Core 8.</li>
-                            <li>Berkolaborasi dengan tim lintas fungsi (IT, CS, Business) untuk memenuhi kebutuhan proses bisnis operasional.</li>
-                            <li>Meningkatkan efisiensi layanan informasi hingga 20% dan mempercepat waktu respons CS hingga 30%.</li>
-                            <li>Menyusun dokumentasi teknis, user guide, dan mempresentasikan hasil proyek kepada manajemen.</li>
+                        <ul class="space-y-2.5 text-sky-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
+                            <li>Merancang dan mengembangkan Dashboard Admin Customer Service Chatbot AI menggunakan ASP.NET Core 8[cite: 4].</li>
+                            <li>Berkolaborasi dengan tim lintas fungsi (IT, CS, Business) untuk memenuhi kebutuhan proses bisnis operasional[cite: 4].</li>
+                            <li>Meningkatkan efisiensi layanan informasi hingga 20% dan mempercepat waktu respons CS hingga 30%[cite: 4].</li>
+                            <li>Menyusun dokumentasi teknis, user guide, dan mempresentasikan hasil proyek kepada manajemen[cite: 4].</li>
                         </ul>
                     </div>
                 </div>
@@ -324,14 +324,14 @@
                 <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
-                            <span class="text-[11px] bg-purple-500/10 text-purple-300 font-semibold px-3 py-1 rounded-full border border-purple-500/20"><i class="fa-solid fa-chalkboard-user mr-1"></i> Univ. Islam Riau</span>
-                            <span class="text-[11px] text-pink-300/60">Okt 2024 - Jul 2026</span>
+                            <span class="text-[11px] bg-indigo-500/10 text-indigo-300 font-semibold px-3 py-1 rounded-full border border-indigo-500/20"><i class="fa-solid fa-chalkboard-user mr-1"></i> Univ. Islam Riau</span>
+                            <span class="text-[11px] text-sky-300/60">Okt 2024 - Jul 2026</span>
                         </div>
                         <h3 class="text-lg font-bold text-white mb-3">Asisten Praktikum Laboratorium IT</h3>
-                        <ul class="space-y-2.5 text-pink-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
-                            <li>Membimbing lebih dari 40+ mahasiswa per kelas untuk 10 mata kuliah lintas bidang (Database, Jaringan, Struktur Data, Big Data, Pemrograman Web).</li>
-                            <li>Melakukan pemeliharaan perangkat laboratorium dan troubleshooting hardware/software, meningkatkan efektivitas praktikum hingga 25%.</li>
-                            <li>Mengembangkan modul praktikum dan rubrik penilaian terstruktur bersama dosen pengampu.</li>
+                        <ul class="space-y-2.5 text-sky-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
+                            <li>Membimbing lebih dari 40+ mahasiswa per kelas untuk 10 mata kuliah lintas bidang (Database, Jaringan, Struktur Data, Big Data, Pemrograman Web)[cite: 4].</li>
+                            <li>Melakukan pemeliharaan perangkat laboratorium dan troubleshooting hardware/software, meningkatkan efektivitas praktikum hingga 25%[cite: 4].</li>
+                            <li>Mengembangkan modul praktikum dan rubrik penilaian terstruktur bersama dosen pengampu[cite: 4].</li>
                         </ul>
                     </div>
                 </div>
@@ -340,28 +340,28 @@
     </section>
 
     <!-- Organizational & Volunteering Experience Section -->
-    <section id="organization" class="py-20 border-b border-pink-950/50">
+    <section id="organization" class="py-20 border-b border-sky-950/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">05. ORGANIZATION & VOLUNTEERING</p>
+                <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">05. ORGANIZATION & VOLUNTEERING</p>
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Organizational & Volunteering Experience</h2>
-                <p class="text-pink-300/70 mt-2 text-sm">Dedikasi dalam kepemimpinan organisasi mahasiswa, tata kelola administrasi, dan pengabdian masyarakat.</p>
+                <p class="text-sky-300/70 mt-2 text-sm">Dedikasi dalam kepemimpinan organisasi mahasiswa, tata kelola administrasi, dan pengabdian masyarakat.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
-                            <span class="text-xs bg-pink-500/10 text-pink-300 font-semibold px-3 py-1 rounded-full border border-pink-500/20">
+                            <span class="text-xs bg-sky-500/10 text-sky-300 font-semibold px-3 py-1 rounded-full border border-sky-500/20">
                                 <i class="fa-solid fa-robot mr-1.5"></i> Groot Robotica UIR
                             </span>
-                            <span class="text-xs text-pink-300/60 font-medium">Feb 2023 - Des 2025 | Pekanbaru, Riau</span>
+                            <span class="text-xs text-sky-300/60 font-medium">Feb 2023 - Des 2025 | Pekanbaru, Riau</span>
                         </div>
                         <h3 class="text-xl font-bold text-white">Sekretaris Organisasi</h3>
-                        <p class="text-pink-400 text-xs font-medium mt-1 mb-3">Organisasi Robotika & Inovasi Teknologi Mahasiswa</p>
-                        <ul class="space-y-2 text-pink-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
-                            <li>Mengelola administrasi organisasi, tata persuratan resmi, dan penyusunan Laporan Pertanggungjawaban (LPJ) program kerja tahunan secara terstruktur.</li>
-                            <li>Mengkoordinasikan lebih dari 10+ kegiatan dan pelatihan kerja organisasi, serta memodernisasi sistem pengarsipan dokumen yang meningkatkan efisiensi administrasi hingga <b>+25%</b>.</li>
+                        <p class="text-sky-400 text-xs font-medium mt-1 mb-3">Organisasi Robotika & Inovasi Teknologi Mahasiswa</p>
+                        <ul class="space-y-2 text-sky-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
+                            <li>Mengelola administrasi organisasi, tata persuratan resmi, dan penyusunan Laporan Pertanggungjawaban (LPJ) program kerja tahunan secara terstruktur[cite: 6].</li>
+                            <li>Mengkoordinasikan lebih dari 10+ kegiatan dan pelatihan kerja organisasi, serta memodernisasi sistem pengarsipan dokumen yang meningkatkan efisiensi administrasi hingga <b>+25%</b>[cite: 6].</li>
                         </ul>
                     </div>
                 </div>
@@ -369,16 +369,16 @@
                 <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
-                            <span class="text-xs bg-rose-500/10 text-rose-300 font-semibold px-3 py-1 rounded-full border border-rose-500/20">
+                            <span class="text-xs bg-cyan-500/10 text-cyan-300 font-semibold px-3 py-1 rounded-full border border-cyan-500/20">
                                 <i class="fa-solid fa-hands-helping mr-1.5"></i> Universitas Islam Riau / Kenagarian Pangkalan
                             </span>
-                            <span class="text-xs text-pink-300/60 font-medium">2021 - 2026 | Pekanbaru & Sumbar</span>
+                            <span class="text-xs text-sky-300/60 font-medium">2021 - 2026 | Pekanbaru & Sumbar</span>
                         </div>
                         <h3 class="text-xl font-bold text-white">Mentor KIP-K & Relawan Sensus Kependudukan</h3>
-                        <p class="text-rose-400 text-xs font-medium mt-1 mb-3">Pendampingan Akademik & Pengabdian Masyarakat</p>
-                        <ul class="space-y-2 text-pink-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
-                            <li>Berperan aktif sebagai <b>Mentor</b> bagi mahasiswa penerima beasiswa KIP Kuliah Angkatan 2025 dalam program pendampingan akademik dan adaptasi perkuliahan.</li>
-                            <li>Berkontribusi sebagai <b>Relawan Sensus Kependudukan</b> di Kenagarian Pangkalan Koto Baru (2021) untuk pendataan dan verifikasi informasi demografi warga secara akurat.</li>
+                        <p class="text-cyan-400 text-xs font-medium mt-1 mb-3">Pendampingan Akademik & Pengabdian Masyarakat</p>
+                        <ul class="space-y-2 text-sky-100/80 text-xs md:text-sm leading-relaxed list-disc list-inside justify-text">
+                            <li>Berperan aktif sebagai <b>Mentor</b> bagi mahasiswa penerima beasiswa KIP Kuliah Angkatan 2025 dalam program pendampingan akademik dan adaptasi perkuliahan[cite: 6].</li>
+                            <li>Berkontribusi sebagai <b>Relawan Sensus Kependudukan</b> di Kenagarian Pangkalan Koto Baru (2021) untuk pendataan dan verifikasi informasi demografi warga secara akurat[cite: 6].</li>
                         </ul>
                     </div>
                 </div>
@@ -390,24 +390,24 @@
     <section id="projects" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">06. PROJECTS</p>
+                <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">06. PROJECTS</p>
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Portofolio & Karya Inovatif</h2>
-                <p class="text-pink-300/70 mt-2 text-sm">Bukti nyata portofolio pengembangan perangkat lunak, rekayasa IoT, dan penelitian akademik.</p>
+                <p class="text-sky-300/70 mt-2 text-sm">Bukti nyata portofolio pengembangan perangkat lunak, rekayasa IoT, dan penelitian akademik.</p>
             </div>
 
             <!-- Baris 1 -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
                     <div class="p-6">
-                        <span class="text-[11px] bg-pink-500/10 text-pink-300 font-semibold px-3 py-1 rounded-full border border-pink-500/20"><i class="fa-solid fa-code mr-1"></i> Laravel & MySQL (BPS)</span>
+                        <span class="text-[11px] bg-sky-500/10 text-sky-300 font-semibold px-3 py-1 rounded-full border border-sky-500/20"><i class="fa-solid fa-code mr-1"></i> Laravel & MySQL (BPS)</span>
                         <h3 class="text-lg font-bold text-white mt-4">Dashboard MENTARI</h3>
-                        <p class="text-pink-100/80 text-xs md:text-sm mt-2 leading-relaxed justify-text">Platform berbasis web untuk memantau, mengelola, dan mengoptimalkan kegiatan perencanaan secara terintegrasi di BPS Provinsi Riau.</p>
+                        <p class="text-sky-100/80 text-xs md:text-sm mt-2 leading-relaxed justify-text">Platform berbasis web untuk memantau, mengelola, dan mengoptimalkan kegiatan perencanaan secara terintegrasi di BPS Provinsi Riau.</p>
                     </div>
-                    <div class="bg-zinc-950/80 p-3 border-t border-pink-950 grid grid-cols-2 gap-2">
-                        <div class="overflow-hidden rounded-lg bg-zinc-950 border border-pink-950 h-44 flex items-center justify-center">
+                    <div class="bg-slate-950/80 p-3 border-t border-sky-950 grid grid-cols-2 gap-2">
+                        <div class="overflow-hidden rounded-lg bg-slate-950 border border-sky-950 h-44 flex items-center justify-center">
                             <img src="images/dokumentasi-mentari.jpeg" alt="Presentasi MENTARI" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <div class="overflow-hidden rounded-lg bg-zinc-950 border border-pink-950 h-44 flex items-center justify-center">
+                        <div class="overflow-hidden rounded-lg bg-slate-950 border border-sky-950 h-44 flex items-center justify-center">
                             <img src="images/dokumentasi-mentari2.jpeg" alt="UI MENTARI" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop'">
                         </div>
                     </div>
@@ -415,12 +415,12 @@
 
                 <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
                     <div class="p-6">
-                        <span class="text-[11px] bg-rose-500/10 text-rose-300 font-semibold px-3 py-1 rounded-full border border-rose-500/20"><i class="fa-solid fa-server mr-1"></i> ASP.NET Core 8 (Pertamina)</span>
+                        <span class="text-[11px] bg-cyan-500/10 text-cyan-300 font-semibold px-3 py-1 rounded-full border border-cyan-500/20"><i class="fa-solid fa-server mr-1"></i> ASP.NET Core 8 (Pertamina)</span>
                         <h3 class="text-lg font-bold text-white mt-4">Dashboard Admin Chatbot AI</h3>
-                        <p class="text-pink-100/80 text-xs md:text-sm mt-2 leading-relaxed justify-text">Dashboard admin operasional untuk memantau, mengelola, dan mengevaluasi layanan informasi chatbot AI di PT Kilang Pertamina Internasional.</p>
+                        <p class="text-sky-100/80 text-xs md:text-sm mt-2 leading-relaxed justify-text">Dashboard admin operasional untuk memantau, mengelola, dan mengevaluasi layanan informasi chatbot AI di PT Kilang Pertamina Internasional.</p>
                     </div>
-                    <div class="bg-zinc-950/80 p-3 border-t border-pink-950">
-                        <div class="overflow-hidden rounded-lg bg-zinc-950 border border-pink-950 h-44 flex items-center justify-center">
+                    <div class="bg-slate-950/80 p-3 border-t border-sky-950">
+                        <div class="overflow-hidden rounded-lg bg-slate-950 border border-sky-950 h-44 flex items-center justify-center">
                             <img src="images/dokumentasi-project-pertamina.png" alt="Dashboard Pertamina" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop'">
                         </div>
                     </div>
@@ -428,12 +428,12 @@
 
                 <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
                     <div class="p-6">
-                        <span class="text-[11px] bg-purple-500/10 text-purple-300 font-semibold px-3 py-1 rounded-full border border-purple-500/20"><i class="fa-solid fa-microchip mr-1"></i> IoT Engineering (ESP32)</span>
+                        <span class="text-[11px] bg-indigo-500/10 text-indigo-300 font-semibold px-3 py-1 rounded-full border border-indigo-500/20"><i class="fa-solid fa-microchip mr-1"></i> IoT Engineering (ESP32)</span>
                         <h3 class="text-lg font-bold text-white mt-4">Sistem Jemuran Pintar Otomatis</h3>
-                        <p class="text-pink-100/80 text-xs md:text-sm mt-2 leading-relaxed justify-text">Mengembangkan sistem perangkat keras & lunak terintegrasi untuk proyek otomatisasi "Jemuran Pintar" menggunakan mikrokontroler ESP32.</p>
+                        <p class="text-sky-100/80 text-xs md:text-sm mt-2 leading-relaxed justify-text">Mengembangkan sistem perangkat keras & lunak terintegrasi untuk proyek otomatisasi "Jemuran Pintar" menggunakan mikrokontroler ESP32.</p>
                     </div>
-                    <div class="bg-zinc-950/80 p-3 border-t border-pink-950">
-                        <div class="overflow-hidden rounded-lg bg-zinc-950 border border-pink-950 h-44 flex items-center justify-center">
+                    <div class="bg-slate-950/80 p-3 border-t border-sky-950">
+                        <div class="overflow-hidden rounded-lg bg-slate-950 border border-sky-950 h-44 flex items-center justify-center">
                             <img src="images/dokuemntasi-jemuran-pintar.jpg" alt="Jemuran Pintar" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop'">
                         </div>
                     </div>
@@ -443,27 +443,27 @@
             <!-- Baris 2 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-fuchsia-500/10 border border-fuchsia-500/20 flex items-center justify-center text-fuchsia-400 text-xl shrink-0 mt-1">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl shrink-0 mt-1">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
                     <div>
-                        <span class="text-[11px] bg-fuchsia-500/10 text-fuchsia-300 font-semibold px-2.5 py-0.5 rounded-full border border-fuchsia-500/20">Web & Mobile Development</span>
+                        <span class="text-[11px] bg-blue-500/10 text-blue-300 font-semibold px-2.5 py-0.5 rounded-full border border-blue-500/20">Web & Mobile Development</span>
                         <h3 class="text-lg font-bold text-white mt-2">Platform E-Commerce "Sepatopia" (React Native & React.js)</h3>
-                        <p class="text-pink-100/80 text-xs md:text-sm mt-1.5 leading-relaxed justify-text">
-                            Berperan sebagai <b>Fullstack Developer</b> dalam merancang dan mengembangkan platform e-commerce "Sepatopia" secara menyeluruh menggunakan ekosistem React Native dan React.js.
+                        <p class="text-sky-100/80 text-xs md:text-sm mt-1.5 leading-relaxed justify-text">
+                            Berperan sebagai <b>Fullstack Developer</b> dalam merancang dan mengembangkan platform e-commerce "Sepatopia" secara menyeluruh menggunakan ekosistem React Native dan React.js[cite: 6].
                         </p>
                     </div>
                 </div>
 
                 <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 text-xl shrink-0 mt-1">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-xl shrink-0 mt-1">
                         <i class="fa-solid fa-flask-vial"></i>
                     </div>
                     <div>
-                        <span class="text-[11px] bg-pink-500/10 text-pink-300 font-semibold px-2.5 py-0.5 rounded-full border border-pink-500/20">Research & Development (PKM UIR)</span>
+                        <span class="text-[11px] bg-sky-500/10 text-sky-300 font-semibold px-2.5 py-0.5 rounded-full border border-sky-500/20">Research & Development (PKM UIR)</span>
                         <h3 class="text-lg font-bold text-white mt-2">Alat Pemantauan Kualitas Air Berbasis IoT</h3>
-                        <p class="text-pink-100/80 text-xs md:text-sm mt-1.5 leading-relaxed justify-text">
-                            Tergabung dalam tim riset Pekan Kreativitas Mahasiswa (PKM) Universitas Islam Riau untuk pengembangan alat pemantauan kualitas air berbasis IoT bagi masyarakat di tepian Sungai Siak.
+                        <p class="text-sky-100/80 text-xs md:text-sm mt-1.5 leading-relaxed justify-text">
+                            Tergabung dalam tim riset Pekan Kreativitas Mahasiswa (PKM) Universitas Islam Riau untuk pengembangan alat pemantauan kualitas air berbasis IoT bagi masyarakat di tepian Sungai Siak[cite: 6].
                         </p>
                     </div>
                 </div>
@@ -472,144 +472,144 @@
     </section>
 
     <!-- Certificates Section -->
-    <section id="certificates" class="py-20 bg-pink-950/20 border-y border-pink-950/50">
+    <section id="certificates" class="py-20 bg-sky-950/20 border-y border-sky-950/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-14">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">07. CERTIFICATES</p>
+                <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">07. CERTIFICATES</p>
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Certificates & Credentials</h2>
-                <p class="text-pink-300/70 mt-2 text-sm">Dokumentasi kredensial resmi, sertifikasi keahlian industri, dan penghargaan prestasi.</p>
+                <p class="text-sky-300/70 mt-2 text-sm">Dokumentasi kredensial resmi, sertifikasi keahlian industri, dan penghargaan prestasi.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Sertifikat 1 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/pertamina.jpg" alt="Sertifikat Pertamina" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-rose-500/10 text-rose-300 font-semibold px-2.5 py-1 rounded border border-rose-500/20"><i class="fa-solid fa-medal mr-1"></i> BUMN / Industri</span>
+                        <span class="text-[10px] bg-cyan-500/10 text-cyan-300 font-semibold px-2.5 py-1 rounded border border-cyan-500/20"><i class="fa-solid fa-medal mr-1"></i> BUMN / Industri</span>
                         <h4 class="font-bold text-base text-white mt-2">Kerja Praktik ASP.NET Core 8</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">PT Kilang Pertamina Internasional RU II Dumai</p>
+                        <p class="text-xs text-sky-300/60 mt-1">PT Kilang Pertamina Internasional RU II Dumai[cite: 6]</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 2 -->
-                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between border-pink-500/30">
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between border-sky-500/30">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/asisten-lab.jpg" alt="Surat Keterangan Asisten Lab" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-purple-500/10 text-purple-300 font-semibold px-2.5 py-1 rounded border border-purple-500/20"><i class="fa-solid fa-file-lines mr-1"></i> Pengalaman Kerja Resmi</span>
+                        <span class="text-[10px] bg-indigo-500/10 text-indigo-300 font-semibold px-2.5 py-1 rounded border border-indigo-500/20"><i class="fa-solid fa-file-lines mr-1"></i> Pengalaman Kerja Resmi</span>
                         <h4 class="font-bold text-base text-white mt-2">Surat Keterangan Asisten Lab IT</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">Laboratorium Teknik Informatika UIR (2024-2026)</p>
+                        <p class="text-xs text-sky-300/60 mt-1">Laboratorium Teknik Informatika UIR (2024-2026)</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 3 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/cisco.jpg" alt="Sertifikat Cisco" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-fuchsia-500/10 text-fuchsia-300 font-semibold px-2.5 py-1 rounded border border-fuchsia-500/20"><i class="fa-solid fa-shield-halved mr-1"></i> Networking & Security</span>
+                        <span class="text-[10px] bg-blue-500/10 text-blue-300 font-semibold px-2.5 py-1 rounded border border-blue-500/20"><i class="fa-solid fa-shield-halved mr-1"></i> Networking & Security</span>
                         <h4 class="font-bold text-base text-white mt-2">CyberOps Associate</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">Cisco Networking Academy</p>
+                        <p class="text-xs text-sky-300/60 mt-1">Cisco Networking Academy[cite: 6]</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 4 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/toefl.jpg" alt="Sertifikat TOEFL" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-pink-500/10 text-pink-300 font-semibold px-2.5 py-1 rounded border border-pink-500/20"><i class="fa-solid fa-language mr-1"></i> Language Proficiency</span>
+                        <span class="text-[10px] bg-sky-500/10 text-sky-300 font-semibold px-2.5 py-1 rounded border border-sky-500/20"><i class="fa-solid fa-language mr-1"></i> Language Proficiency</span>
                         <h4 class="font-bold text-base text-white mt-2">TOEFL Prediction (Score: 580)</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">Universal English Pare Kediri</p>
+                        <p class="text-xs text-sky-300/60 mt-1">Universal English Pare Kediri[cite: 6]</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 5 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/ai.jpg" alt="Sertifikat AI" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-purple-500/10 text-purple-300 font-semibold px-2.5 py-1 rounded border border-purple-500/20"><i class="fa-solid fa-brain mr-1"></i> Artificial Intelligence</span>
+                        <span class="text-[10px] bg-indigo-500/10 text-indigo-300 font-semibold px-2.5 py-1 rounded border border-indigo-500/20"><i class="fa-solid fa-brain mr-1"></i> Artificial Intelligence</span>
                         <h4 class="font-bold text-base text-white mt-2">AI: Masa Depan Digerakkan AI</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">IQ Primatech & Rakamin Academy</p>
+                        <p class="text-xs text-sky-300/60 mt-1">IQ Primatech & Rakamin Academy[cite: 6]</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 6 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/microsoft.jpg" alt="Sertifikat Microsoft" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-pink-500/10 text-pink-300 font-semibold px-2.5 py-1 rounded border border-pink-500/20"><i class="fa-solid fa-lock mr-1"></i> Cybersecurity</span>
+                        <span class="text-[10px] bg-sky-500/10 text-sky-300 font-semibold px-2.5 py-1 rounded border border-sky-500/20"><i class="fa-solid fa-lock mr-1"></i> Cybersecurity</span>
                         <h4 class="font-bold text-base text-white mt-2">Introduction to Cybersecurity</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">Microsoft & ASEAN Foundation</p>
+                        <p class="text-xs text-sky-300/60 mt-1">Microsoft & ASEAN Foundation[cite: 6]</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 7 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/asean-cyber.jpg" alt="Sertifikat ASEAN Cyber" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-fuchsia-500/10 text-fuchsia-300 font-semibold px-2.5 py-1 rounded border border-fuchsia-500/20"><i class="fa-solid fa-globe mr-1"></i> Cybersecurity Program</span>
+                        <span class="text-[10px] bg-blue-500/10 text-blue-300 font-semibold px-2.5 py-1 rounded border border-blue-500/20"><i class="fa-solid fa-globe mr-1"></i> Cybersecurity Program</span>
                         <h4 class="font-bold text-base text-white mt-2">ASEAN Cybersecurity Skilling Programme</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">Microsoft, ASEAN Foundation & BullyID</p>
+                        <p class="text-xs text-sky-300/60 mt-1">Microsoft, ASEAN Foundation & BullyID[cite: 6]</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 8 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/pmm.jpg" alt="Sertifikat PMM" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-rose-500/10 text-rose-300 font-semibold px-2.5 py-1 rounded border border-rose-500/20"><i class="fa-solid fa-book-open mr-1"></i> Academic Exchange</span>
+                        <span class="text-[10px] bg-cyan-500/10 text-cyan-300 font-semibold px-2.5 py-1 rounded border border-cyan-500/20"><i class="fa-solid fa-book-open mr-1"></i> Academic Exchange</span>
                         <h4 class="font-bold text-base text-white mt-2">Pertukaran Mahasiswa Merdeka 4</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">Universitas Nusa Cendana</p>
+                        <p class="text-xs text-sky-300/60 mt-1">Universitas Nusa Cendana[cite: 6]</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 9 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/arduino1.jpg" alt="Sertifikat Arduino 1" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1555668793-718b2853f1c8?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-purple-500/10 text-purple-300 font-semibold px-2.5 py-1 rounded border border-purple-500/20"><i class="fa-solid fa-users mr-1"></i> Panitia & Pelatihan</span>
+                        <span class="text-[10px] bg-indigo-500/10 text-indigo-300 font-semibold px-2.5 py-1 rounded border border-indigo-500/20"><i class="fa-solid fa-users mr-1"></i> Panitia & Pelatihan</span>
                         <h4 class="font-bold text-base text-white mt-2">Pelatihan Dasar Arduino Batch 1</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">Fakultas Teknik Universitas Islam Riau</p>
+                        <p class="text-xs text-sky-300/60 mt-1">Fakultas Teknik Universitas Islam Riau</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 10 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/arduino2.jpg" alt="Sertifikat Arduino 2" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1555668793-718b2853f1c8?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-purple-500/10 text-purple-300 font-semibold px-2.5 py-1 rounded border border-purple-500/20"><i class="fa-solid fa-users mr-1"></i> Panitia & Pelatihan</span>
+                        <span class="text-[10px] bg-indigo-500/10 text-indigo-300 font-semibold px-2.5 py-1 rounded border border-indigo-500/20"><i class="fa-solid fa-users mr-1"></i> Panitia & Pelatihan</span>
                         <h4 class="font-bold text-base text-white mt-2">Pelatihan Dasar Arduino Batch 2</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">Fakultas Teknik Universitas Islam Riau</p>
+                        <p class="text-xs text-sky-300/60 mt-1">Fakultas Teknik Universitas Islam Riau</p>
                     </div>
                 </div>
 
                 <!-- Sertifikat 11 -->
                 <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <div class="overflow-hidden rounded-xl bg-zinc-950 border border-pink-950 h-56 flex items-center justify-center mb-4">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 border border-sky-950 h-56 flex items-center justify-center mb-4">
                             <img src="sertifikat/arduino3.jpg" alt="Sertifikat Arduino 3" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1555668793-718b2853f1c8?q=80&w=500&auto=format&fit=crop'">
                         </div>
-                        <span class="text-[10px] bg-purple-500/10 text-purple-300 font-semibold px-2.5 py-1 rounded border border-purple-500/20"><i class="fa-solid fa-users mr-1"></i> Panitia & Pelatihan</span>
+                        <span class="text-[10px] bg-indigo-500/10 text-indigo-300 font-semibold px-2.5 py-1 rounded border border-indigo-500/20"><i class="fa-solid fa-users mr-1"></i> Panitia & Pelatihan</span>
                         <h4 class="font-bold text-base text-white mt-2">Pelatihan Dasar Arduino Batch 3</h4>
-                        <p class="text-xs text-pink-300/60 mt-1">Fakultas Teknik Universitas Islam Riau</p>
+                        <p class="text-xs text-sky-300/60 mt-1">Fakultas Teknik Universitas Islam Riau</p>
                     </div>
                 </div>
             </div>
@@ -617,55 +617,55 @@
     </section>
 
     <!-- Footer / Kontak Section -->
-    <footer id="contact" class="bg-zinc-950 border-t border-pink-950/80 py-20">
+    <footer id="contact" class="bg-slate-950 border-t border-sky-950/80 py-20">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
-                <p class="text-xs font-bold tracking-widest text-pink-400 uppercase">08. CONTACT</p>
+                <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">08. CONTACT</p>
                 <h3 class="text-2xl md:text-4xl font-extrabold text-white mt-2">Mari Buat Proyekmu Bekerja Lebih Baik.</h3>
-                <p class="text-pink-300/70 text-sm mt-3">Ceritakan kebutuhanmu. Saya akan membantu menemukan solusi yang paling tepat.</p>
+                <p class="text-sky-300/70 text-sm mt-3">Ceritakan kebutuhanmu. Saya akan membantu menemukan solusi yang paling tepat.</p>
             </div>
 
-            <div class="glass-card p-8 md:p-10 rounded-3xl border border-pink-950">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pb-8 border-b border-pink-950 mb-8">
-                    <a href="https://wa.me/6282286948407?text=Halo%20Kak%20Cici%20Wela%20Sari,%20S.T.,%0A%0ASaya%20melihat%20portofolio%20Anda,%20dan%20kami%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20kerja%20posisi%20Software%20Engineer%20/%20Data%20Analyst%20di%20perusahaan%20kami.%0A%0ATerima%20kasih." target="_blank" class="flex items-center justify-between p-4 rounded-xl bg-pink-950/30 hover:bg-pink-950/60 transition border border-pink-950">
-                        <span class="text-sm font-semibold text-white flex items-center gap-2.5"><i class="fab fa-whatsapp text-pink-400 text-lg"></i> WhatsApp</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-pink-300/60"></i>
+            <div class="glass-card p-8 md:p-10 rounded-3xl border border-sky-950">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pb-8 border-b border-sky-950 mb-8">
+                    <a href="https://wa.me/6282286948407?text=Halo%20Kak%20Cici%20Wela%20Sari,%20S.T.,%0A%0ASaya%20melihat%20portofolio%20Anda,%20dan%20kami%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20kerja%20posisi%20Software%20Engineer%20/%20Data%20Analyst%20di%20perusahaan%20kami.%0A%0ATerima%20kasih." target="_blank" class="flex items-center justify-between p-4 rounded-xl bg-sky-950/30 hover:bg-sky-950/60 transition border border-sky-950">
+                        <span class="text-sm font-semibold text-white flex items-center gap-2.5"><i class="fab fa-whatsapp text-sky-400 text-lg"></i> WhatsApp</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-sky-300/60"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/cici-wela-sari-20b07335b/" target="_blank" class="flex items-center justify-between p-4 rounded-xl bg-pink-950/30 hover:bg-pink-950/60 transition border border-pink-950">
-                        <span class="text-sm font-semibold text-white flex items-center gap-2.5"><i class="fab fa-linkedin-in text-pink-400 text-lg"></i> LinkedIn</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-pink-300/60"></i>
+                    <a href="https://www.linkedin.com/in/cici-wela-sari-20b07335b/" target="_blank" class="flex items-center justify-between p-4 rounded-xl bg-sky-950/30 hover:bg-sky-950/60 transition border border-sky-950">
+                        <span class="text-sm font-semibold text-white flex items-center gap-2.5"><i class="fab fa-linkedin-in text-sky-400 text-lg"></i> LinkedIn</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-sky-300/60"></i>
                     </a>
-                    <a href="mailto:ciciwelasari23dz@gmail.com" class="flex items-center justify-between p-4 rounded-xl bg-pink-950/30 hover:bg-pink-950/60 transition border border-pink-950">
-                        <span class="text-sm font-semibold text-white flex items-center gap-2.5"><i class="fas fa-envelope text-pink-400 text-lg"></i> Email</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-pink-300/60"></i>
+                    <a href="mailto:ciciwelasari23dz@gmail.com" class="flex items-center justify-between p-4 rounded-xl bg-sky-950/30 hover:bg-sky-950/60 transition border border-sky-950">
+                        <span class="text-sm font-semibold text-white flex items-center gap-2.5"><i class="fas fa-envelope text-sky-400 text-lg"></i> Email</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-sky-300/60"></i>
                     </a>
                 </div>
 
                 <form action="mailto:ciciwelasari23dz@gmail.com" method="GET" enctype="text/plain" class="space-y-6">
                     <div>
-                        <label class="block text-xs font-bold text-pink-300/70 uppercase tracking-wider mb-2">Nama</label>
-                        <input type="text" name="name" required placeholder="Nama Anda" class="w-full bg-zinc-900 border border-pink-950 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-pink-500 transition">
+                        <label class="block text-xs font-bold text-sky-300/70 uppercase tracking-wider mb-2">Nama</label>
+                        <input type="text" name="name" required placeholder="Nama Anda" class="w-full bg-slate-900 border border-sky-950 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-sky-500 transition">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-pink-300/70 uppercase tracking-wider mb-2">Email</label>
-                        <input type="email" name="email" required placeholder="nama@email.com" class="w-full bg-zinc-900 border border-pink-950 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-pink-500 transition">
+                        <label class="block text-xs font-bold text-sky-300/70 uppercase tracking-wider mb-2">Email</label>
+                        <input type="email" name="email" required placeholder="nama@email.com" class="w-full bg-slate-900 border border-sky-950 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-sky-500 transition">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-pink-300/70 uppercase tracking-wider mb-2">Ceritakan Kebutuhanmu</label>
-                        <textarea name="message" rows="4" required placeholder="Masalah perangkat atau proyek yang ingin dikerjakan..." class="w-full bg-zinc-900 border border-pink-950 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-pink-500 transition"></textarea>
+                        <label class="block text-xs font-bold text-sky-300/70 uppercase tracking-wider mb-2">Ceritakan Kebutuhanmu</label>
+                        <textarea name="message" rows="4" required placeholder="Masalah perangkat atau proyek yang ingin dikerjakan..." class="w-full bg-slate-900 border border-sky-950 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-sky-500 transition"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-pink-500 hover:bg-pink-400 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-lg">
+                    <button type="submit" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-lg">
                         Kirim Pesan <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </form>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center mt-16 pt-8 border-t border-pink-950/50 text-xs text-pink-300/50 gap-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mt-16 pt-8 border-t border-sky-950/50 text-xs text-sky-300/50 gap-4">
                 <div class="flex gap-6">
-                    <a href="#about" class="hover:text-pink-400 transition">Beranda</a>
-                    <a href="#skills" class="hover:text-pink-400 transition">Keahlian</a>
-                    <a href="#organization" class="hover:text-pink-400 transition">Organisasi</a>
-                    <a href="#contact" class="hover:text-pink-400 transition">Kontak</a>
+                    <a href="#about" class="hover:text-sky-400 transition">Beranda</a>
+                    <a href="#skills" class="hover:text-sky-400 transition">Keahlian</a>
+                    <a href="#organization" class="hover:text-sky-400 transition">Organisasi</a>
+                    <a href="#contact" class="hover:text-sky-400 transition">Kontak</a>
                 </div>
                 <p>&copy; 2026 Cici Wela Sari. All Rights Reserved.</p>
             </div>
