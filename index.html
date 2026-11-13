@@ -11,7 +11,12 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0b1329; color: #e2e8f0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1329;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
         h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
         .glass-card {
             background: rgba(15, 23, 42, 0.75);
@@ -28,6 +33,31 @@
             text-align: justify;
             text-justify: inter-word;
         }
+
+        /* Sistem Push Sidebar Murni (Tanpa Blur, Lebar Otomatis Menyesuaikan) */
+        #sidebar-drawer {
+            width: 270px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        #top-header, #page-wrapper {
+            transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+        }
+        body.sidebar-open #sidebar-drawer {
+            transform: translateX(0);
+        }
+        /* Pada layar tablet/laptop/PC, konten dan header otomatis menyesuaikan lebar saat garis 3 dibuka */
+        @media (min-width: 768px) {
+            body.sidebar-open #top-header {
+                margin-left: 270px;
+                width: calc(100% - 270px);
+            }
+            body.sidebar-open #page-wrapper {
+                margin-left: 270px;
+                width: calc(100% - 270px);
+            }
+        }
+
         /* Scrollbar gelap dan rapi */
         ::-webkit-scrollbar {
             width: 8px;
@@ -45,14 +75,14 @@
         }
     </style>
 </head>
-<body class="selection:bg-sky-500 selection:text-white min-h-screen overflow-x-hidden">
+<body class="selection:bg-sky-500 selection:text-white min-h-screen">
 
-    <!-- Sidebar Drawer Samping (Default Tertutup, Muncul Ketika Tombol Garis 3 Diklik) -->
-    <aside id="sidebar-drawer" class="fixed top-0 left-0 bottom-0 w-[275px] bg-[#0d1633] border-r border-sky-950/80 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 shadow-2xl overflow-y-auto">
+    <!-- Sidebar Samping (Tanpa Backdrop Blur Sama Sekali) -->
+    <aside id="sidebar-drawer" class="fixed top-0 left-0 bottom-0 bg-[#0d1633] border-r border-sky-950/80 z-50 flex flex-col justify-between p-6 shadow-2xl overflow-y-auto">
         <div>
             <!-- Header Sidebar & Tombol Tutup (X) -->
             <div class="flex items-center justify-between pb-4 mb-5 border-b border-sky-950/80">
-                <span class="text-xs font-bold tracking-widest text-sky-400 uppercase">Navigasi Menu</span>
+                <span class="text-xs font-bold tracking-widest text-sky-400 uppercase">Menu Navigasi</span>
                 <button id="close-menu" type="button" aria-label="Tutup Menu" class="w-8 h-8 rounded-lg bg-sky-950/60 hover:bg-sky-500/20 text-sky-200/80 hover:text-white flex items-center justify-center focus:outline-none transition cursor-pointer">
                     <i class="fa-solid fa-xmark text-base"></i>
                 </button>
@@ -107,11 +137,11 @@
         </div>
     </aside>
 
-    <!-- Header Topbar (Otomatis menyesuaikan lebar saat sidebar dibuka di layar desktop) -->
-    <header id="top-header" class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-sky-950/80 transition-all duration-300">
+    <!-- Header Topbar dengan Tombol Garis 3 -->
+    <header id="top-header" class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-sky-950/80">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <!-- Tombol Garis 3 -->
+                <!-- Tombol Garis 3 (Buka / Tutup Sidebar) -->
                 <button id="menu-btn" type="button" aria-label="Buka/Tutup Menu Navigasi" class="w-10 h-10 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 text-sky-300 hover:text-white flex items-center justify-center focus:outline-none transition cursor-pointer">
                     <i class="fa-solid fa-bars text-lg"></i>
                 </button>
@@ -130,14 +160,14 @@
         </div>
     </header>
 
-    <!-- Wrapper Konten Utama (Lebar otomatis menyesuaikan tanpa blur saat sidebar dibuka) -->
-    <div id="page-wrapper" class="transition-all duration-300 ease-in-out">
+    <!-- Wrapper Konten Utama (Otomatis menyesuaikan ukuran baik saat garis 3 dibuka maupun ditutup) -->
+    <div id="page-wrapper">
 
         <!-- Hero Section -->
-        <section id="about" class="max-w-7xl mx-auto px-6 pt-36 pb-20 md:pt-44 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <section id="about" class="max-w-7xl mx-auto px-6 pt-36 pb-20 md:pt-44 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <!-- Foto Profil / Wisuda -->
             <div class="lg:col-span-4 flex justify-center order-1 lg:order-2">
-                <div class="relative w-72 h-96 rounded-3xl overflow-hidden glass-card p-2 border-2 border-sky-500/30 shadow-2xl">
+                <div class="relative w-64 sm:w-72 h-96 rounded-3xl overflow-hidden glass-card p-2 border-2 border-sky-500/30 shadow-2xl">
                     <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-full h-full object-cover rounded-2xl" onerror="this.src='foto-profil.jpg'">
                     <div class="absolute bottom-4 left-4 right-4 bg-slate-950/85 backdrop-blur-md p-3 rounded-xl border border-sky-950 text-center">
                         <p class="text-xs font-bold text-sky-400">Cici Wela Sari, S.T.</p>
@@ -200,7 +230,7 @@
                     <p class="text-sky-300/70 mt-2 text-sm">Kompetensi stack teknologi, keterampilan penunjang kerja, dan penguasaan bahasa.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                     <div class="glass-card p-6 rounded-2xl">
                         <div class="text-sky-400 text-2xl mb-4"><i class="fa-solid fa-laptop-code"></i></div>
                         <h3 class="font-bold text-base text-white mb-2">Programming & Frameworks</h3>
@@ -254,7 +284,7 @@
                     <p class="text-sky-300/70 mt-2 text-sm">Pencapaian akademik unggul dengan dedikasi tinggi di institusi terkemuka.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <!-- Universitas Islam Riau -->
                     <div class="glass-card p-8 rounded-2xl relative overflow-hidden flex flex-col justify-between">
                         <div class="absolute top-0 right-0 bg-sky-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow">
@@ -357,7 +387,7 @@
                     <p class="text-sky-300/70 mt-2 text-sm">Dedikasi dalam kepemimpinan organisasi mahasiswa, tata kelola administrasi, dan pengabdian masyarakat.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
                         <div>
                             <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
@@ -459,7 +489,7 @@
                 </div>
 
                 <!-- Baris 2: Proyek Tambahan & Riset -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <!-- Sepatopia -->
                     <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl shrink-0 mt-1">
@@ -688,50 +718,30 @@
         </footer>
     </div>
 
-    <!-- Script JavaScript untuk Push Sidebar Tanpa Blur -->
+    <!-- Script JavaScript untuk Push Sidebar -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const closeMenu = document.getElementById('close-menu');
-        const sidebarDrawer = document.getElementById('sidebar-drawer');
-        const topHeader = document.getElementById('top-header');
-        const pageWrapper = document.getElementById('page-wrapper');
 
-        let isOpen = false;
-
-        function openSidebar() {
-            isOpen = true;
-            sidebarDrawer.classList.remove('-translate-x-full');
-            // Di layar desktop/tablet (md ke atas), geser konten & header agar lebarnya menyesuaikan tanpa menimpa teks
-            topHeader.classList.add('md:pl-[275px]');
-            pageWrapper.classList.add('md:pl-[275px]');
+        function toggleSidebar() {
+            document.body.classList.toggle('sidebar-open');
         }
 
         function closeSidebar() {
-            isOpen = false;
-            sidebarDrawer.classList.add('-translate-x-full');
-            topHeader.classList.remove('md:pl-[275px]');
-            pageWrapper.classList.remove('md:pl-[275px]');
-        }
-
-        function toggleSidebar() {
-            if (isOpen) {
-                closeSidebar();
-            } else {
-                openSidebar();
-            }
+            document.body.classList.remove('sidebar-open');
         }
 
         menuBtn.addEventListener('click', toggleSidebar);
         closeMenu.addEventListener('click', closeSidebar);
 
-        // Tutup sidebar dengan tombol Escape
+        // Tutup dengan tombol Escape
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && isOpen) {
+            if (e.key === 'Escape') {
                 closeSidebar();
             }
         });
 
-        // Navigasi menu: di mobile otomatis menutup drawer, di desktop tetap rapi
+        // Klik menu navigasi: gulir halus ke tujuan (di layar HP otomatis menutup sidebar)
         document.querySelectorAll('#sidebar-drawer a.nav-item').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -743,16 +753,14 @@
                 }
 
                 if (targetSection) {
-                    setTimeout(() => {
-                        const headerOffset = 75;
-                        const elementPosition = targetSection.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    const headerOffset = 75;
+                    const elementPosition = targetSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }, 100);
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
