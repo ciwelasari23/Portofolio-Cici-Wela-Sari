@@ -77,64 +77,65 @@
 </head>
 <body class="selection:bg-sky-500 selection:text-white min-h-screen">
 
-    <!-- Sidebar Samping (Tanpa Tulisan Navigasi Menu, Foto & Menu Digeser ke Atas) -->
-    <aside id="sidebar-drawer" class="fixed top-0 left-0 bottom-0 bg-[#0d1633] border-r border-sky-950/80 z-50 flex flex-col justify-between px-6 pt-5 pb-6 shadow-2xl overflow-y-auto">
+    <!-- Sidebar Samping -->
+    <aside id="sidebar-drawer" class="fixed top-0 left-0 bottom-0 bg-[#0d1633] border-r border-sky-950/80 z-50 flex flex-col justify-between px-5 pt-5 pb-5 shadow-2xl overflow-y-auto">
         <div>
-            <!-- Profil Singkat & Tombol Tutup (X) di Pojok Kanan Atas -->
-            <div class="relative pb-5 mb-5 border-b border-sky-950/80">
+            <!-- Profil Singkat Rata Tengah & Foto Diperbesar + Tombol Tutup (X) di Pojok Kanan Atas -->
+            <div class="relative pb-5 mb-4 border-b border-sky-950/80 text-center pt-2">
                 <button id="close-menu" type="button" aria-label="Tutup Menu" class="absolute top-0 right-0 w-8 h-8 rounded-lg bg-sky-950/60 hover:bg-sky-500/20 text-sky-200/80 hover:text-white flex items-center justify-center focus:outline-none transition cursor-pointer">
                     <i class="fa-solid fa-xmark text-base"></i>
                 </button>
-                <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-16 h-16 rounded-full object-cover border-2 border-sky-500/40 mb-3 shadow-md" onerror="this.src='foto-profil.jpg'">
+                <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-20 h-20 mx-auto rounded-full object-cover border-2 border-sky-500/40 mb-3 shadow-md" onerror="this.src='foto-profil.jpg'">
                 <h4 class="text-base font-bold text-white tracking-tight">Cici Wela Sari, S.T.</h4>
                 <p class="text-xs text-sky-300/70 mt-0.5">Software Engineer & Data Analyst</p>
             </div>
 
             <!-- List Menu Samping -->
-            <nav class="space-y-1.5">
-                <a href="#about" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2.5 rounded-xl transition group">
+            <nav class="space-y-1">
+                <a href="#about" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2 rounded-xl transition group">
                     <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">01</span>
                     <span class="font-medium">About</span>
                 </a>
-                <a href="#skills" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2.5 rounded-xl transition group">
+                <a href="#skills" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2 rounded-xl transition group">
                     <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">02</span>
                     <span class="font-medium">Skills & Languages</span>
                 </a>
-                <a href="#education" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2.5 rounded-xl transition group">
+                <a href="#education" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2 rounded-xl transition group">
                     <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">03</span>
                     <span class="font-medium">Education</span>
                 </a>
-                <a href="#experience" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2.5 rounded-xl transition group">
+                <a href="#experience" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2 rounded-xl transition group">
                     <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">04</span>
                     <span class="font-medium">Experience</span>
                 </a>
-                <a href="#organization" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2.5 rounded-xl transition group">
+                <a href="#organization" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2 rounded-xl transition group">
                     <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">05</span>
                     <span class="font-medium">Organization</span>
                 </a>
-                <a href="#projects" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2.5 rounded-xl transition group">
+                <a href="#projects" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2 rounded-xl transition group">
                     <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">06</span>
                     <span class="font-medium">Projects</span>
                 </a>
-                <a href="#certificates" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2.5 rounded-xl transition group">
+                <a href="#certificates" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2 rounded-xl transition group">
                     <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">07</span>
                     <span class="font-medium">Certificates</span>
                 </a>
-                <a href="#contact" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2.5 rounded-xl transition group">
+                <a href="#contact" class="nav-item flex items-center gap-4 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3.5 py-2 rounded-xl transition group">
                     <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">08</span>
                     <span class="font-medium">Contact</span>
                 </a>
             </nav>
         </div>
 
-        <div class="pt-6 border-t border-sky-950/60 mt-8">
-            <p class="text-[11px] text-sky-300/40">&copy; 2026 Cici Wela Sari. All Rights Reserved.</p>
+        <!-- Copyright 1 Baris (Tidak Turun) & Rata Tengah -->
+        <div class="pt-4 border-t border-sky-950/60 mt-4 text-center">
+            <p class="text-[10.5px] text-sky-300/40 whitespace-nowrap">&copy; 2026 Cici Wela Sari. All Rights Reserved.</p>
         </div>
     </aside>
 
     <!-- Header Topbar dengan Tombol Garis 3 -->
     <header id="top-header" class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-sky-950/80">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-3.5 flex justify-between items-center">
             <div class="flex items-center gap-4">
                 <!-- Tombol Garis 3 (Buka / Tutup Sidebar) -->
                 <button id="menu-btn" type="button" aria-label="Buka/Tutup Menu Navigasi" class="w-10 h-10 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 text-sky-300 hover:text-white flex items-center justify-center focus:outline-none transition cursor-pointer">
@@ -159,7 +160,7 @@
     <div id="page-wrapper">
 
         <!-- Hero Section -->
-        <section id="about" class="max-w-7xl mx-auto px-6 pt-36 pb-20 md:pt-44 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <section id="about" class="max-w-7xl mx-auto px-6 pt-24 pb-16 md:pt-28 md:pb-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <!-- Foto Profil / Wisuda -->
             <div class="lg:col-span-4 flex justify-center order-1 lg:order-2">
                 <div class="relative w-64 sm:w-72 h-96 rounded-3xl overflow-hidden glass-card p-2 border-2 border-sky-500/30 shadow-2xl">
@@ -172,7 +173,7 @@
             </div>
 
             <!-- Teks Summary -->
-            <div class="lg:col-span-8 space-y-6 order-2 lg:order-1">
+            <div class="lg:col-span-8 space-y-5 order-2 lg:order-1">
                 <div class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs font-semibold px-4 py-1.5 rounded-full">
                     <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
                     Fresh Graduate S1 Teknik Informatika | IPK 3.90 (Cumlaude)
@@ -707,7 +708,7 @@
 
                 <!-- Bagian Bawah Bersih Hanya Copyright -->
                 <div class="mt-16 pt-8 border-t border-sky-950/50 text-center text-xs text-sky-300/50">
-                    <p>&copy; 2026 Cici Wela Sari. All Rights Reserved.</p>
+                    <p class="whitespace-nowrap">&copy; 2026 Cici Wela Sari. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
@@ -748,7 +749,7 @@
                 }
 
                 if (targetSection) {
-                    const headerOffset = 75;
+                    const headerOffset = 72;
                     const elementPosition = targetSection.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
