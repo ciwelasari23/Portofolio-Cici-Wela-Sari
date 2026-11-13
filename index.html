@@ -28,7 +28,6 @@
             text-align: justify;
             text-justify: inter-word;
         }
-        /* Custom scrollbar untuk sidebar */
         aside::-webkit-scrollbar {
             width: 4px;
         }
@@ -40,76 +39,112 @@
 </head>
 <body class="selection:bg-sky-500 selection:text-white min-h-screen">
 
-    <!-- Header Topbar Khusus Mobile (Otomatis hilang di Desktop md:hidden) -->
-    <header class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-sky-950/80 md:hidden">
-        <div class="px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <button id="menu-btn" class="text-sky-300 hover:text-white focus:outline-none text-xl">
-                    <i class="fa-solid fa-bars"></i>
+    <!-- Header Topbar Utama (Tampil di Desktop & Mobile dengan Tombol Garis 3) -->
+    <header id="top-header" class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-sky-950/80 transition-all duration-300">
+        <div class="px-6 py-3.5 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <!-- Tombol Garis 3 (Toggle Buka/Tutup Sidebar) -->
+                <button id="toggle-sidebar-btn" aria-label="Toggle Menu" class="w-9 h-9 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/20 text-sky-300 hover:text-white flex items-center justify-center focus:outline-none transition">
+                    <i class="fa-solid fa-bars text-base"></i>
                 </button>
-                <a href="#" class="text-lg font-extrabold tracking-tight text-white flex items-center gap-2">
+                <a href="#about" class="text-base md:text-lg font-extrabold tracking-tight text-white flex items-center gap-2">
                     <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span> Cici Wela Sari<span class="text-sky-400">.</span>
                 </a>
+                <!-- Indikator Halaman/Section Aktif di Topbar -->
+                <span class="hidden sm:inline-flex items-center gap-2 text-xs text-sky-300/60 border-l border-sky-900 pl-4">
+                    <i class="fa-solid fa-compass text-sky-400/80"></i>
+                    <span id="current-page-label" class="font-medium text-sky-200">01. About</span>
+                </span>
             </div>
-            <span class="inline-flex items-center gap-1.5 bg-sky-500/10 border border-sky-500/20 text-sky-300 text-[11px] font-semibold px-2.5 py-1 rounded-full">
-                <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span> Available
-            </span>
+
+            <div class="flex items-center gap-3">
+                <span class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs font-semibold px-3 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                    <span class="hidden sm:inline">Tersedia untuk Proyek</span>
+                    <span class="sm:hidden">Available</span>
+                </span>
+            </div>
         </div>
     </header>
 
-    <!-- Backdrop Gelap untuk Menu Mobile -->
-    <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden md:hidden transition-opacity duration-300 opacity-0"></div>
+    <!-- Backdrop Gelap untuk Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0"></div>
 
-    <!-- Sidebar Navigasi Utama (Drawer di Mobile, Permanen di Desktop md:translate-x-0) -->
-    <aside id="sidebar-nav" class="fixed top-0 left-0 bottom-0 w-[260px] bg-[#0d1633] border-r border-sky-950/80 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 shadow-2xl overflow-y-auto">
+    <!-- Sidebar Navigasi (Default Tertutup agar tidak langsung terbuka, dibuka lewat Garis 3) -->
+    <aside id="sidebar-nav" class="fixed top-0 left-0 bottom-0 w-[270px] bg-[#0d1633] border-r border-sky-950/80 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 shadow-2xl overflow-y-auto">
         <div>
-            <!-- Tombol Close khusus Mobile -->
-            <div class="flex justify-end mb-2 md:hidden">
-                <button id="close-menu" class="text-sky-200/70 hover:text-white text-xl p-1 focus:outline-none">
-                    <i class="fa-solid fa-xmark"></i>
+            <!-- Header Sidebar dengan Tombol Garis 3 / Tutup -->
+            <div class="flex items-center justify-between pb-4 mb-5 border-b border-sky-950/80">
+                <span class="text-xs font-bold tracking-widest text-sky-400 uppercase">Navigasi Menu</span>
+                <button id="close-sidebar-btn" aria-label="Tutup Menu" class="w-8 h-8 rounded-lg bg-sky-950/60 hover:bg-sky-500/20 text-sky-200/80 hover:text-white flex items-center justify-center focus:outline-none transition">
+                    <i class="fa-solid fa-xmark text-base"></i>
                 </button>
             </div>
 
             <!-- Profil Singkat di Sidebar -->
-            <div class="pb-6 mb-6 border-b border-sky-950/80 md:pt-2">
+            <div class="pb-6 mb-6 border-b border-sky-950/80">
                 <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-16 h-16 rounded-full object-cover border-2 border-sky-500/40 mb-3.5 shadow-md" onerror="this.src='foto-profil.jpg'">
                 <h4 class="text-base font-bold text-white tracking-tight">Cici Wela Sari, S.T.</h4>
                 <p class="text-xs text-sky-300/70 mt-0.5">Software Engineer & Data Analyst</p>
             </div>
 
             <!-- Daftar Menu Navigasi -->
-            <nav id="nav-links" class="space-y-2">
-                <a href="#about" class="nav-item flex items-center gap-3.5 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2 rounded-xl transition group">
-                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">01</span>
-                    <span class="font-medium">About</span>
+            <nav id="nav-links" class="space-y-1.5">
+                <a href="#about" data-label="01. About" class="nav-item flex items-center justify-between text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2.5 rounded-xl transition group">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">01</span>
+                        <span class="font-medium">About</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-0 group-hover:opacity-100 text-sky-400 transition"></i>
                 </a>
-                <a href="#skills" class="nav-item flex items-center gap-3.5 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2 rounded-xl transition group">
-                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">02</span>
-                    <span class="font-medium">Skills & Languages</span>
+                <a href="#skills" data-label="02. Skills & Languages" class="nav-item flex items-center justify-between text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2.5 rounded-xl transition group">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">02</span>
+                        <span class="font-medium">Skills & Languages</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-0 group-hover:opacity-100 text-sky-400 transition"></i>
                 </a>
-                <a href="#education" class="nav-item flex items-center gap-3.5 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2 rounded-xl transition group">
-                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">03</span>
-                    <span class="font-medium">Education</span>
+                <a href="#education" data-label="03. Education" class="nav-item flex items-center justify-between text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2.5 rounded-xl transition group">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">03</span>
+                        <span class="font-medium">Education</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-0 group-hover:opacity-100 text-sky-400 transition"></i>
                 </a>
-                <a href="#experience" class="nav-item flex items-center gap-3.5 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2 rounded-xl transition group">
-                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">04</span>
-                    <span class="font-medium">Experience</span>
+                <a href="#experience" data-label="04. Experience" class="nav-item flex items-center justify-between text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2.5 rounded-xl transition group">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">04</span>
+                        <span class="font-medium">Experience</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-0 group-hover:opacity-100 text-sky-400 transition"></i>
                 </a>
-                <a href="#organization" class="nav-item flex items-center gap-3.5 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2 rounded-xl transition group">
-                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">05</span>
-                    <span class="font-medium">Organization</span>
+                <a href="#organization" data-label="05. Organization" class="nav-item flex items-center justify-between text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2.5 rounded-xl transition group">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">05</span>
+                        <span class="font-medium">Organization</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-0 group-hover:opacity-100 text-sky-400 transition"></i>
                 </a>
-                <a href="#projects" class="nav-item flex items-center gap-3.5 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2 rounded-xl transition group">
-                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">06</span>
-                    <span class="font-medium">Projects</span>
+                <a href="#projects" data-label="06. Projects" class="nav-item flex items-center justify-between text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2.5 rounded-xl transition group">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">06</span>
+                        <span class="font-medium">Projects</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-0 group-hover:opacity-100 text-sky-400 transition"></i>
                 </a>
-                <a href="#certificates" class="nav-item flex items-center gap-3.5 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2 rounded-xl transition group">
-                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">07</span>
-                    <span class="font-medium">Certificates</span>
+                <a href="#certificates" data-label="07. Certificates" class="nav-item flex items-center justify-between text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2.5 rounded-xl transition group">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">07</span>
+                        <span class="font-medium">Certificates</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-0 group-hover:opacity-100 text-sky-400 transition"></i>
                 </a>
-                <a href="#contact" class="nav-item flex items-center gap-3.5 text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2 rounded-xl transition group">
-                    <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">08</span>
-                    <span class="font-medium">Contact</span>
+                <a href="#contact" data-label="08. Contact" class="nav-item flex items-center justify-between text-sm text-sky-100/80 hover:text-sky-400 hover:bg-sky-500/10 px-3 py-2.5 rounded-xl transition group">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-xs font-mono text-sky-400/60 group-hover:text-sky-400">08</span>
+                        <span class="font-medium">Contact</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-0 group-hover:opacity-100 text-sky-400 transition"></i>
                 </a>
             </nav>
         </div>
@@ -124,14 +159,14 @@
         </div>
     </aside>
 
-    <!-- Wrapper Konten Utama (Diberi padding kiri 260px di layar md ke atas agar sejajar dengan sidebar) -->
-    <div class="md:pl-[260px] transition-all duration-300">
+    <!-- Wrapper Konten Utama -->
+    <div id="main-content" class="transition-all duration-300">
         
         <!-- Hero Section -->
-        <section id="about" class="max-w-6xl mx-auto px-6 lg:px-10 pt-28 pb-20 md:pt-20 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <section id="about" class="max-w-7xl mx-auto px-6 pt-32 pb-20 md:pt-36 md:pb-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <!-- Foto Profil / Wisuda -->
-            <div class="lg:col-span-4 flex justify-center order-1 lg:order-2">
-                <div class="relative w-64 sm:w-72 h-96 rounded-3xl overflow-hidden glass-card p-2 border-2 border-sky-500/30 shadow-2xl">
+            <div class="md:col-span-4 flex justify-center order-1 md:order-2">
+                <div class="relative w-72 h-96 rounded-3xl overflow-hidden glass-card p-2 border-2 border-sky-500/30 shadow-2xl">
                     <img src="foto-wisuda1.jpg" alt="Cici Wela Sari, S.T." class="w-full h-full object-cover rounded-2xl" onerror="this.src='foto-profil.jpg'">
                     <div class="absolute bottom-4 left-4 right-4 bg-slate-950/85 backdrop-blur-md p-3 rounded-xl border border-sky-950 text-center">
                         <p class="text-xs font-bold text-sky-400">Cici Wela Sari, S.T.</p>
@@ -141,13 +176,13 @@
             </div>
 
             <!-- Teks Summary -->
-            <div class="lg:col-span-8 space-y-6 order-2 lg:order-1">
+            <div class="md:col-span-8 space-y-6 order-2 md:order-1">
                 <div class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs font-semibold px-4 py-1.5 rounded-full">
                     <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
                     Fresh Graduate S1 Teknik Informatika | IPK 3.90 (Cumlaude)
                 </div>
 
-                <h1 class="text-2xl md:text-3xl xl:text-4xl font-extrabold tracking-tight leading-snug">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight leading-snug">
                     Membangun Solusi Perangkat <span class="text-sky-400">Lunak & Analisis Data</span> Berstandar Industri.
                 </h1>
                 
@@ -187,14 +222,14 @@
 
         <!-- Technical, Soft Skills & Languages Section -->
         <section id="skills" class="py-20 bg-sky-950/20 border-y border-sky-950/50">
-            <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-14">
                     <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">02. SKILLS & LANGUAGES</p>
                     <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Technical, Soft Skills & Languages</h2>
                     <p class="text-sky-300/70 mt-2 text-sm">Kompetensi stack teknologi, keterampilan penunjang kerja, dan penguasaan bahasa.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                     <div class="glass-card p-6 rounded-2xl">
                         <div class="text-sky-400 text-2xl mb-4"><i class="fa-solid fa-laptop-code"></i></div>
                         <h3 class="font-bold text-base text-white mb-2">Programming & Frameworks</h3>
@@ -215,23 +250,23 @@
                         <h3 class="font-bold text-base text-white mb-2">Soft Skills</h3>
                         <p class="text-xs md:text-sm text-sky-100/80 leading-relaxed justify-text">Analytical Thinking, Problem Solving, Team Collaboration, Detail-Oriented, Time Management, Leadership.</p>
                     </div>
-                    <div class="glass-card p-6 rounded-2xl border-sky-500/30 md:col-span-2 xl:col-span-2">
+                    <div class="glass-card p-6 rounded-2xl border-sky-500/30">
                         <div class="text-sky-300 text-2xl mb-4"><i class="fa-solid fa-language"></i></div>
                         <h3 class="font-bold text-base text-white mb-3">Languages</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs md:text-sm">
-                            <div class="bg-slate-900/50 p-3.5 rounded-xl border border-sky-950/60">
+                        <div class="space-y-3 text-xs md:text-sm">
+                            <div>
                                 <div class="flex justify-between items-center font-semibold text-white">
                                     <span>Bahasa Indonesia</span>
                                     <span class="text-[10px] bg-sky-500/20 text-sky-300 px-2 py-0.5 rounded-full border border-sky-500/30">Fasih / Native</span>
                                 </div>
-                                <p class="text-[11px] text-sky-200/60 mt-1">Kompetensi profesional penuh</p>
+                                <p class="text-[11px] text-sky-200/60 mt-0.5">Kompetensi profesional penuh</p>
                             </div>
-                            <div class="bg-slate-900/50 p-3.5 rounded-xl border border-sky-950/60">
+                            <div class="pt-2 border-t border-sky-950/60">
                                 <div class="flex justify-between items-center font-semibold text-white">
                                     <span>Bahasa Inggris</span>
                                     <span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-500/30">Profesional</span>
                                 </div>
-                                <p class="text-[11px] text-sky-200/60 mt-1">Kelas Internasional | Skor TOEFL: 580</p>
+                                <p class="text-[11px] text-sky-200/60 mt-0.5">Kelas Internasional | Skor TOEFL: 580</p>
                             </div>
                         </div>
                     </div>
@@ -241,14 +276,14 @@
 
         <!-- Education Section -->
         <section id="education" class="py-20">
-            <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-14">
                     <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">03. EDUCATION</p>
                     <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Latar Belakang Akademik</h2>
                     <p class="text-sky-300/70 mt-2 text-sm">Pencapaian akademik unggul dengan dedikasi tinggi di institusi terkemuka.</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Universitas Islam Riau -->
                     <div class="glass-card p-8 rounded-2xl relative overflow-hidden flex flex-col justify-between">
                         <div class="absolute top-0 right-0 bg-sky-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow">
@@ -284,14 +319,14 @@
 
         <!-- Work Experience Section -->
         <section id="experience" class="py-20 bg-sky-950/20 border-y border-sky-950/50">
-            <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-14">
                     <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">04. WORK EXPERIENCE</p>
                     <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Pengalaman Kerja Profesional</h2>
                     <p class="text-sky-300/70 mt-2 text-sm">Kontribusi nyata dalam rekayasa sistem, pengembangan aplikasi, dan pengajaran akademik.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
                         <div>
                             <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
@@ -344,14 +379,14 @@
 
         <!-- Organizational & Volunteering Experience Section -->
         <section id="organization" class="py-20 border-b border-sky-950/50">
-            <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-14">
                     <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">05. ORGANIZATION & VOLUNTEERING</p>
                     <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Organizational & Volunteering Experience</h2>
                     <p class="text-sky-300/70 mt-2 text-sm">Dedikasi dalam kepemimpinan organisasi mahasiswa, tata kelola administrasi, dan pengabdian masyarakat.</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
                         <div>
                             <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
@@ -391,7 +426,7 @@
 
         <!-- Projects & Research Section -->
         <section id="projects" class="py-20">
-            <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-14">
                     <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">06. PROJECTS</p>
                     <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Portofolio & Karya Inovatif</h2>
@@ -399,7 +434,7 @@
                 </div>
 
                 <!-- Baris 1: Proyek Utama -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <!-- MENTARI BPS -->
                     <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
                         <div class="p-6">
@@ -453,7 +488,7 @@
                 </div>
 
                 <!-- Baris 2: Proyek Tambahan & Riset -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Sepatopia -->
                     <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl shrink-0 mt-1">
@@ -487,14 +522,14 @@
 
         <!-- Certificates Section -->
         <section id="certificates" class="py-20 bg-sky-950/20 border-y border-sky-950/50">
-            <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-14">
                     <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">07. CERTIFICATES</p>
                     <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-1">Certificates & Credentials</h2>
                     <p class="text-sky-300/70 mt-2 text-sm">Dokumentasi kredensial resmi, sertifikasi keahlian industri, dan penghargaan prestasi.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Sertifikat 1 -->
                     <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
                         <div>
@@ -632,7 +667,7 @@
 
         <!-- Footer / Kontak Section -->
         <footer id="contact" class="bg-slate-950 border-t border-sky-950/80 py-20">
-            <div class="max-w-4xl mx-auto px-6 lg:px-10">
+            <div class="max-w-4xl mx-auto px-6">
                 <div class="text-center mb-12">
                     <p class="text-xs font-bold tracking-widest text-sky-400 uppercase">08. CONTACT</p>
                     <h3 class="text-2xl md:text-4xl font-extrabold text-white mt-2">Mari Buat Proyekmu Bekerja Lebih Baik.</h3>
@@ -640,7 +675,7 @@
                 </div>
 
                 <div class="glass-card p-8 md:p-10 rounded-3xl border border-sky-950">
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-8 border-b border-sky-950 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pb-8 border-b border-sky-950 mb-8">
                         <a href="https://wa.me/6282286948407?text=Halo%20Kak%20Cici%20Wela%20Sari,%20S.T.,%0A%0ASaya%20melihat%20portofolio%20Anda,%20dan%20kami%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20kerja%20posisi%20Software%20Engineer%20/%20Data%20Analyst%20di%20perusahaan%20kami.%0A%0ATerima%20kasih." target="_blank" class="flex items-center justify-between p-4 rounded-xl bg-sky-950/30 hover:bg-sky-950/60 transition border border-sky-950">
                             <span class="text-sm font-semibold text-white flex items-center gap-2.5"><i class="fab fa-whatsapp text-sky-400 text-lg"></i> WhatsApp</span>
                             <i class="fa-solid fa-arrow-up-right-from-square text-xs text-sky-300/60"></i>
@@ -674,7 +709,7 @@
                     </form>
                 </div>
 
-                <div class="flex flex-col sm:flex-row justify-between items-center mt-16 pt-8 border-t border-sky-950/50 text-xs text-sky-300/50 gap-4">
+                <div class="flex flex-col md:flex-row justify-between items-center mt-16 pt-8 border-t border-sky-950/50 text-xs text-sky-300/50 gap-4">
                     <div class="flex gap-6">
                         <a href="#about" class="hover:text-sky-400 transition">Beranda</a>
                         <a href="#skills" class="hover:text-sky-400 transition">Keahlian</a>
@@ -687,14 +722,18 @@
         </footer>
     </div>
 
-    <!-- Script JavaScript untuk Sidebar Mobile & Active Section Highlight -->
+    <!-- Script JavaScript untuk Buka-Tutup Sidebar & Navigasi Halaman -->
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const closeMenu = document.getElementById('close-menu');
+        const toggleBtn = document.getElementById('toggle-sidebar-btn');
+        const closeBtn = document.getElementById('close-sidebar-btn');
         const sidebarNav = document.getElementById('sidebar-nav');
         const menuBackdrop = document.getElementById('menu-backdrop');
+        const currentPageLabel = document.getElementById('current-page-label');
 
-        function openDrawer() {
+        let isSidebarOpen = false;
+
+        function openSidebar() {
+            isSidebarOpen = true;
             sidebarNav.classList.remove('-translate-x-full');
             menuBackdrop.classList.remove('hidden');
             setTimeout(() => {
@@ -704,28 +743,67 @@
             document.body.style.overflow = 'hidden';
         }
 
-        function closeDrawer() {
-            // Hanya tutup drawer jika sedang berada di viewport mobile (< 768px)
-            if (window.innerWidth < 768) {
-                sidebarNav.classList.add('-translate-x-full');
-                menuBackdrop.classList.remove('opacity-100');
-                menuBackdrop.classList.add('opacity-0');
-                setTimeout(() => {
-                    menuBackdrop.classList.add('hidden');
-                }, 300);
-                document.body.style.overflow = '';
+        function closeSidebar() {
+            isSidebarOpen = false;
+            sidebarNav.classList.add('-translate-x-full');
+            menuBackdrop.classList.remove('opacity-100');
+            menuBackdrop.classList.add('opacity-0');
+            setTimeout(() => {
+                menuBackdrop.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        function toggleSidebar() {
+            if (isSidebarOpen) {
+                closeSidebar();
+            } else {
+                openSidebar();
             }
         }
 
-        menuBtn.addEventListener('click', openDrawer);
-        closeMenu.addEventListener('click', closeDrawer);
-        menuBackdrop.addEventListener('click', closeDrawer);
+        toggleBtn.addEventListener('click', toggleSidebar);
+        closeBtn.addEventListener('click', closeSidebar);
+        menuBackdrop.addEventListener('click', closeSidebar);
 
-        document.querySelectorAll('#sidebar-nav a').forEach(link => {
-            link.addEventListener('click', closeDrawer);
+        // Tutup dengan tombol Escape di keyboard
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isSidebarOpen) {
+                closeSidebar();
+            }
         });
 
-        // Active Scroll Spy untuk menandai menu yang sedang aktif
+        // Navigasi perpindahan section dengan menutup sidebar terlebih dahulu
+        document.querySelectorAll('#sidebar-nav a.nav-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                const label = this.getAttribute('data-label');
+
+                if (label && currentPageLabel) {
+                    currentPageLabel.textContent = label;
+                }
+
+                closeSidebar();
+
+                if (targetSection) {
+                    setTimeout(() => {
+                        const headerOffset = 72;
+                        const elementPosition = targetSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        history.pushState(null, null, targetId);
+                    }, 180);
+                }
+            });
+        });
+
+        // Active Scroll Spy untuk memperbarui menu aktif & indikator topbar
         const sections = document.querySelectorAll('section[id], footer[id]');
         const navItems = document.querySelectorAll('.nav-item');
 
@@ -733,7 +811,7 @@
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 180) {
+                if (scrollY >= sectionTop - 200) {
                     current = section.getAttribute('id');
                 }
             });
@@ -742,6 +820,10 @@
                 item.classList.remove('bg-sky-500/15', 'text-sky-400', 'border-l-2', 'border-sky-400');
                 if (item.getAttribute('href') === `#${current}`) {
                     item.classList.add('bg-sky-500/15', 'text-sky-400', 'border-l-2', 'border-sky-400');
+                    const label = item.getAttribute('data-label');
+                    if (label && currentPageLabel) {
+                        currentPageLabel.textContent = label;
+                    }
                 }
             });
         });
